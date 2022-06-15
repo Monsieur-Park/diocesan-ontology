@@ -1,0 +1,2941 @@
+@prefix : <http://purl.org/ontology/scc#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/ontology/scc#> .
+
+<http://purl.org/ontology/scc> rdf:type owl:Ontology ;
+                                <http://purl.org/dc/elements/1.1/title> "SCC Ontology" ;
+                                <http://purl.org/dc/terms/creator> "Yohan Park" ;
+                                <http://purl.org/dc/terms/description> ""@en ;
+                                <http://purl.org/dc/terms/language> "English" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/scc#Name_of_administrative_unit
+:Name_of_administrative_unit rdf:type owl:AnnotationProperty ;
+                             rdfs:label "Name of administrative unit"@en ;
+                             rdfs:subPropertyOf :variantName .
+
+
+###  http://purl.org/ontology/scc#alternative_name
+:alternative_name rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf :Name_of_administrative_unit ;
+                  rdfs:range rdfs:Literal ,
+                             xsd:string .
+
+
+###  http://purl.org/ontology/scc#official_name
+:official_name rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf :Name_of_administrative_unit ;
+               rdfs:range rdfs:Literal ,
+                          xsd:string .
+
+
+###  http://purl.org/ontology/scc#precedingUnit
+:precedingUnit rdf:type owl:AnnotationProperty ;
+               rdfs:range :AdministrativeArea ,
+                          :administrative_unit .
+
+
+###  http://purl.org/ontology/scc#succeedingUnit
+:succeedingUnit rdf:type owl:AnnotationProperty ;
+                rdfs:range :AdministrativeArea ,
+                           :administrative_unit .
+
+
+###  http://purl.org/ontology/scc#variantName
+:variantName rdf:type owl:AnnotationProperty ;
+             rdfs:label "Variant name"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs
+<http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs> rdf:type owl:AnnotationProperty ;
+                                                                   rdfs:label "owl:sameAs"@en .
+
+
+###  http://xmlns.com/foaf/0.1/page
+<http://xmlns.com/foaf/0.1/page> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://erlangen-crm.org/091216/P1.is_identified_by
+<http://erlangen-crm.org/091216/P1.is_identified_by> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://erlangen-crm.org/091216/E1.CRM_Entity> ;
+                                                     rdfs:range <http://erlangen-crm.org/140617/E41_Appellation> ;
+                                                     rdfs:comment "This property describes the naming or identification of any real world item by a name or any other identifier. This property is intended for identifiers in general use, which form part of the world the model intends to describe, and not merely for internal database identifiers which are specific to a technical system, unless these latter also have a more general use outside the technical context. This property includes in particular identification by mathematical expressions such as coordinate systems used for the identification of instances of E53 Place. The property does not reveal anything about when, where and by whom this identifier was used. A more detailed representation can be made using the fully developed (i.e. indirect) path through E15 Identifier Assignment. Examples: the capital of Italy (E53) is identified by \"Rome\" (E48), text 25014-32 (E33) is identified by \"The Decline and Fall of the Roman Empire\" (E35)."@en ;
+                                                     rdfs:label "P1.is_identified_by"@en .
+
+
+###  http://erlangen-crm.org/091216/P1I.identifies
+<http://erlangen-crm.org/091216/P1I.identifies> rdf:type owl:ObjectProperty ;
+                                                owl:inverseOf <http://erlangen-crm.org/140617/P87_is_identified_by> ;
+                                                rdfs:domain <http://erlangen-crm.org/140617/E41_Appellation> ;
+                                                rdfs:range <http://erlangen-crm.org/091216/E1.CRM_Entity> .
+
+
+###  http://erlangen-crm.org/091216/P3.has_note
+<http://erlangen-crm.org/091216/P3.has_note> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://erlangen-crm.org/091216/E1.CRM_Entity> ;
+                                             rdfs:range <http://erlangen-crm.org/091216/E62.String> ;
+                                             rdfs:comment "This property is a container for all informal descriptions about an object that have not been expressed in terms of CRM constructs. In particular it captures the characterisation of the item itself, its internal structures, appearance etc. Like property P2 has type (is type of), this property is a consequence of the restricted focus of the CRM. The aim is not to capture, in a structured form, everything that can be said about an item; indeed, the CRM formalism is not regarded as sufficient to express everything that can be said. Good practice requires use of distinct note fields for different aspects of a characterisation. The P3.1 has type property of P3 has note allows differentiation of specific notes, e.g. \"construction\", \"decoration\" etc. An item may have many notes, but a note is attached to a specific item. Example: coffee mug - OXCMS:1983.1.1 (E19) has note chipped at edge of handle (E62) has type Condition (E55)."@en .
+
+
+###  http://erlangen-crm.org/091216/P48.has_preferred_identifier
+<http://erlangen-crm.org/091216/P48.has_preferred_identifier> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <http://erlangen-crm.org/091216/P1.is_identified_by> ;
+                                                              rdfs:range <http://erlangen-crm.org/140617/E42_Identifier> ;
+                                                              rdfs:comment "\"This property records the preferred E42 Identifier that was used to identify an instance of E1 CRM Entity at the time this property was recorded. More than one preferred identifier may have been assigned to an item over time. Use of this property requires an external mechanism for assigning temporal validity to the respective CRM instance. P48 has preferred identifier (is preferred identifier of), is a shortcut for the path from E1 CRM Entity through P140 assigned attribute to (was attributed by), E15 Identifier Assignment, P37 assigned (was assigned by) to E42 Identifier. The fact that an identifier is a preferred one for an organisation can be better expressed in a context independent form by assigning a suitable E55 Type to the respective instance of E15 Identifier Assignment using the P2 has type property. Example: The pair of Lederhosen donated by Dr Martin Doerr (E22) has preferred identifier OXCMS:2001.1.32 (E42).\""@en ;
+                                                              rdfs:label "P48.has_preferred_identifier"@en .
+
+
+###  http://erlangen-crm.org/091216/P59I.is_located_on_or_within
+<http://erlangen-crm.org/091216/P59I.is_located_on_or_within> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://erlangen-crm.org/140617/E53_Place> ;
+                                                              rdfs:range <http://erlangen-crm.org/091216/E18.Physical_Thing> ;
+                                                              rdfs:label "P59I.is_located_on_or_within"@en .
+
+
+###  http://erlangen-crm.org/091216/P70.documents
+<http://erlangen-crm.org/091216/P70.documents> rdf:type owl:ObjectProperty ;
+                                               owl:inverseOf <http://erlangen-crm.org/091216/P70I.is_documented_in> ;
+                                               rdfs:domain <http://erlangen-crm.org/140617/E31_Document> ;
+                                               rdfs:range <http://erlangen-crm.org/091216/E1.CRM_Entity> ;
+                                               rdfs:comment "This property describes the CRM Entities documented by instances of E31 Document. Documents may describe any conceivable entity, hence the link to the highest-level entity in the CRM hierarchy. This property is intended for cases where a reference is regarded as being of a documentary character, in the scholarly or scientific sense. Example: the British Museum catalogue (E31) documents the British Museum's Collection (E78)."@en ;
+                                               rdfs:label "P70.documents"@en .
+
+
+###  http://erlangen-crm.org/091216/P70I.is_documented_in
+<http://erlangen-crm.org/091216/P70I.is_documented_in> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://erlangen-crm.org/091216/E1.CRM_Entity> ;
+                                                       rdfs:range <http://erlangen-crm.org/140617/E31_Document> ;
+                                                       rdfs:label "P70I.is_documented_in"@en .
+
+
+###  http://erlangen-crm.org/091216/P78.is_identified_by
+<http://erlangen-crm.org/091216/P78.is_identified_by> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <http://erlangen-crm.org/091216/P1.is_identified_by> ;
+                                                      rdfs:domain <http://erlangen-crm.org/current/E52_Time-Span> ;
+                                                      rdfs:range <http://erlangen-crm.org/140617/E49_Time_Appellation> ;
+                                                      rdfs:comment "This property identifies an E52 Time-Span using an E49 Time Appellation. Example: the time span 1926 to 1988 (E52) is identified by Showa (Japanese time appellation) (E49)."@en ;
+                                                      rdfs:label "P78.is_identified_by"@en .
+
+
+###  http://erlangen-crm.org/091216/P82.at_some_time_within
+<http://erlangen-crm.org/091216/P82.at_some_time_within> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://erlangen-crm.org/current/E52_Time-Span> ;
+                                                         rdfs:range <http://erlangen-crm.org/091216/E61.Time_Primitive> ;
+                                                         rdfs:comment "\"This property describes the maximum period of time within which an E52 Time-Span falls. Since Time-Spans may not have precisely known temporal extents, the CRM supports statements about the minimum and maximum temporal extents of Time-Spans. This property allows a Time-Span's maximum temporal extent (i.e. it's outer boundary) to be assigned an E61 Time Primitive value. Time Primitives are treated by the CRM as application or system specific date intervals, and are not further analysed. Example: the time-span of the development of the CIDOC CRM (E52) at some time within 1992 - infinity (E61).\""@en ;
+                                                         rdfs:label "P82.at_some_time_within"@en .
+
+
+###  http://erlangen-crm.org/120111/P102_has_title
+<http://erlangen-crm.org/120111/P102_has_title> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://erlangen-crm.org/091216/P1.is_identified_by> ;
+                                                owl:inverseOf <http://erlangen-crm.org/120111/P102i_is_title_of> ;
+                                                rdfs:domain <http://erlangen-crm.org/091216/E71.Man-Made_Thing> ;
+                                                rdfs:range <http://erlangen-crm.org/140617/E35_Title> ;
+                                                rdfs:comment "Scope note: This property describes the E35 Title applied to an instance of E71 Man-Made Thing. The E55 Type of Title is assigned in a sub property. The P102.1 has type property of the P102 has title (is title of) property enables the relationship between the Title and the thing to be further clarified, for example, if the Title was a given Title, a supplied Title etc. It allows any man-made material or immaterial thing to be given a Title. It is possible to imagine a Title being created without a specific object in mind. Examples: - the first book of the Old Testament (E33) has title \"Genesis\" (E35) has type translated (E55)"@en ;
+                                                rdfs:label "P102_has_title"@en .
+
+
+###  http://erlangen-crm.org/120111/P102i_is_title_of
+<http://erlangen-crm.org/120111/P102i_is_title_of> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://erlangen-crm.org/091216/P1I.identifies> ;
+                                                   rdfs:domain <http://erlangen-crm.org/140617/E35_Title> ;
+                                                   rdfs:range <http://erlangen-crm.org/091216/E71.Man-Made_Thing> ;
+                                                   rdfs:label "P102i_is_title_of"@en .
+
+
+###  http://erlangen-crm.org/120111/P11_had_participant
+<http://erlangen-crm.org/120111/P11_had_participant> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://erlangen-crm.org/140617/E5_Event> ;
+                                                     rdfs:range <http://erlangen-crm.org/140617/E39_Actor> ;
+                                                     rdfs:comment "\"Scope note: This property describes the active or passive participation of instances of E39 Actors in an E5 Event. It connects the life-line of the related E39 Actor with the E53 Place and E50 Date of the event. The property implies that the Actor was involved in the event but does not imply any causal relationship. The subject of a portrait can be said to have participated in the creation of the portrait. Examples: - Napoleon (E21) participated in The Battle of Waterloo (E7) - Maria (E21) participated in Photographing of Maria (E7)\""@en ;
+                                                     rdfs:label "P11_had_participant"@en .
+
+
+###  http://erlangen-crm.org/120111/P12_occurred_in_the_presence_of
+<http://erlangen-crm.org/120111/P12_occurred_in_the_presence_of> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://erlangen-crm.org/140617/E5_Event> ;
+                                                                 rdfs:range <http://erlangen-crm.org/140617/E77_Persistent_Item> ;
+                                                                 rdfs:comment "Scope note: This property describes the active or passive presence of an E77 Persistent Item in an E5 Event without implying any specific role. It connects the history of a thing with the E53 Place and E50 Date of an event. For example, an object may be the desk, now in a museum on which a treaty was signed. The presence of an immaterial thing implies the presence of at least one of its carriers. Examples: - Deckchair 42 (E19) was present at The sinking of the Titanic (E5)"@en ;
+                                                                 rdfs:label "P12_occurred_in_the_presence_of"@en .
+
+
+###  http://erlangen-crm.org/120111/P7_took_place_at
+<http://erlangen-crm.org/120111/P7_took_place_at> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://erlangen-crm.org/current/E4_Period> ;
+                                                  rdfs:range <http://erlangen-crm.org/140617/E53_Place> ;
+                                                  rdfs:comment "Scope note: his property describes the spatial location of an instance of E4 Period. The related E53 Place should be seen as an approximation of the geographical area within which the phenomena that characterise the period in question occurred. P7 took place at (witnessed) does not convey any meaning other than spatial positioning (generally on the surface of the earth). For example, the period \"RГ©volution franГ§aise\" can be said to have taken place in \"France\", the \"Victorian\" period, may be said to have taken place in \"Britain\" and its colonies, as well as other parts of Europe and north America. A period can take place at multiple locations. Examples - the period \"RГ©volution franГ§aise\" (E4) took place at France (E53)"@en ;
+                                                  rdfs:label "P7_took_place_at"@en .
+
+
+###  http://erlangen-crm.org/120111/P92_brought_into_existence
+<http://erlangen-crm.org/120111/P92_brought_into_existence> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf <http://erlangen-crm.org/120111/P12_occurred_in_the_presence_of> ;
+                                                            rdfs:domain <http://erlangen-crm.org/140617/E5_Event> ;
+                                                            rdfs:range <http://erlangen-crm.org/140617/E77_Persistent_Item> ;
+                                                            rdfs:comment "Scope note: This property allows an E63 Beginning of Existence event to be linked to the E77 Persistent Item brought into existence by it. It allows a \"start\" to be attached to any Persistent Item being documented i.e. E70 Thing, E72 Legal Object, E39 Actor, E41 Appellation, E51 Contact Point and E55 Type. Examples: - the birth of Mozart (E67) brought into existence Mozart (E21)"@en ;
+                                                            rdfs:label "P92_brought_into_existence"@en .
+
+
+###  http://erlangen-crm.org/120111/P93_took_out_of_existence
+<http://erlangen-crm.org/120111/P93_took_out_of_existence> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <http://erlangen-crm.org/120111/P12_occurred_in_the_presence_of> ;
+                                                           rdfs:domain <http://erlangen-crm.org/120111/E64_End_of_Existence> ;
+                                                           rdfs:range <http://erlangen-crm.org/140617/E77_Persistent_Item> ;
+                                                           rdfs:comment "Scope note: This property allows an E64 End of Existence event to be linked to the E77 Persistent Item taken out of existence by it. In the case of immaterial things, the E64 End of Existence is considered to take place with the destruction of the last physical carrier. This allows an \"end\" to be attached to any Persistent Item being documented i.e. E70 Thing, E72 Legal Object, E39 Actor, E41 Appellation, E51 Contact Point and E55 Type. For many Persistent Items we know the maximum life-span and can infer, that they must have ended to exist. We assume in that case an End of Existence, which may be as unnoticeable as forgetting the secret knowledge by the last representative of some indigenous nation. Examples: - the death of Mozart (E69) took out of existence Mozart (E21)"@en ;
+                                                           rdfs:label "P93_took_out_of_existence"@en .
+
+
+###  http://erlangen-crm.org/120111/P95_has_formed
+<http://erlangen-crm.org/120111/P95_has_formed> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://erlangen-crm.org/120111/P92_brought_into_existence> ;
+                                                rdfs:domain <http://erlangen-crm.org/120111/E66_Formation> ;
+                                                rdfs:range <http://erlangen-crm.org/140617/E74_Group> ;
+                                                rdfs:comment "Scope note: This property links the founding or E66 Formation for an E74 Group with the Group itself. Examples: - the formation of the CIDOC CRM SIG at the August 2000 CIDOC Board meeting (E66) has formed the CIDOC CRM Special Interest Group (E74)"@en ;
+                                                rdfs:label "P95_has_formed"@en .
+
+
+###  http://erlangen-crm.org/120111/P99_dissolved
+<http://erlangen-crm.org/120111/P99_dissolved> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://erlangen-crm.org/120111/P93_took_out_of_existence> ;
+                                               rdfs:domain <http://erlangen-crm.org/120111/E68_Dissolution> ;
+                                               rdfs:range <http://erlangen-crm.org/140617/E74_Group> ;
+                                               rdfs:comment "Scope note: This property links the disbanding or E68 Dissolution of an E74 Group to the Group itself. Examples: - the end of The Hole in the Wall Gang (E68) dissolved The Hole in the Wall Gang (E74)"@en ;
+                                               rdfs:label "P99_dissolved"@en .
+
+
+###  http://erlangen-crm.org/140617/P117_occurs_during
+<http://erlangen-crm.org/140617/P117_occurs_during> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://erlangen-crm.org/current/E4_Period> ;
+                                                    rdfs:range <http://erlangen-crm.org/current/E4_Period> ;
+                                                    rdfs:comment """Scope note:              This property allows the entire E52 Time-Span of an E2 Temporal Entity to be situated within the Time-Span of another temporal entity that starts before and ends after the included temporal entity.  
+
+ 
+
+This property is only necessary if the time span is unknown (otherwise the relationship can be calculated). This property is the same as the \"during / includes\" relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).
+
+ 
+
+Examples:             
+
+Middle Saxon period (E4) occurs during Saxon period (E4)"""@en ;
+                                                    rdfs:label "P117 occurs during"@en .
+
+
+###  http://erlangen-crm.org/140617/P120_occurs_before
+<http://erlangen-crm.org/140617/P120_occurs_before> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://erlangen-crm.org/current/E4_Period> ;
+                                                    rdfs:range <http://erlangen-crm.org/current/E4_Period> ;
+                                                    rdfs:comment """Scope note:              This property identifies the relative chronological sequence of two temporal entities.
+
+ 
+
+It implies that a temporal gap exists between the end of A and the start of B. This property is only necessary if the relevant time spans are unknown (otherwise the relationship can be calculated).
+
+ 
+
+This property is the same as the \"before / after\" relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).
+
+Examples:             
+
+Early Bronze Age (E4) occurs before Late Bronze age (E4)"""@en ;
+                                                    rdfs:label "P120 occurs before"@en .
+
+
+###  http://erlangen-crm.org/140617/P120i_occurs_after
+<http://erlangen-crm.org/140617/P120i_occurs_after> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://erlangen-crm.org/current/E4_Period> ;
+                                                    rdfs:range <http://erlangen-crm.org/current/E4_Period> ;
+                                                    rdfs:comment """Scope note:              This property identifies the relative chronological sequence of two temporal entities.
+
+ 
+
+It implies that a temporal gap exists between the end of A and the start of B. This property is only necessary if the relevant time spans are unknown (otherwise the relationship can be calculated).
+
+ 
+
+This property is the same as the \"before / after\" relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).
+
+Examples:             
+
+ Late Bronze age (E4) occurs after Early Bronze Age (E4)"""@en ;
+                                                    rdfs:label "P120i occurs after"@en .
+
+
+###  http://erlangen-crm.org/140617/P14i_performed
+<http://erlangen-crm.org/140617/P14i_performed> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://erlangen-crm.org/120111/P11_had_participant> ;
+                                                rdfs:domain <http://erlangen-crm.org/140617/E7_Activity> ;
+                                                rdfs:range <http://erlangen-crm.org/140617/E39_Actor> ;
+                                                rdfs:comment """This property describes the active participation of an instance of E39 Actor in an instance of E7 Activity.
+It implies causal or legal responsibility. The P14.1 in the role of property of the property specifies the nature of an Actor’s participation."""@en ;
+                                                rdfs:label "P14 performed"@en .
+
+
+###  http://erlangen-crm.org/140617/P22i_acquired_title_through
+<http://erlangen-crm.org/140617/P22i_acquired_title_through> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                                                             rdfs:domain <http://erlangen-crm.org/140617/E8_Acquisition> ;
+                                                             rdfs:range <http://erlangen-crm.org/140617/E39_Actor> ;
+                                                             rdfs:comment """This property identifies the instance of E39 Actor that acquires the legal ownership of an
+object as a result of an instance of E8 Acquisition.
+The property will typically describe an Actor purchasing or otherwise acquiring an object from
+another Actor. However, title may also be acquired, without any corresponding loss of title by
+another Actor, through legal fieldwork such as hunting, shooting or fishing.
+In reality the title is either transferred to or from someone, or both."""@en ;
+                                                             rdfs:label "P22 acquired title through"@en .
+
+
+###  http://erlangen-crm.org/140617/P2_has_type
+<http://erlangen-crm.org/140617/P2_has_type> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://erlangen-crm.org/091216/E1.CRM_Entity> ;
+                                             rdfs:range <http://erlangen-crm.org/140617/E55_Type> ;
+                                             rdfs:comment """This property allows sub typing of CRM entities - a form of specialisation – through the use of a terminological hierarchy, or thesaurus.
+The CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CRM may by specialised into any number of sub entities, which can be defined in the E55 Type hierarchy. E51 Contact Point, for example, may be specialised into \"e-mail address\", \"telephone number\", \"post office box\", \"URL\" etc. none of which figures explicitly in the CRM hierarchy. Sub typing obviously requires consistency between the meaning of the terms assigned and the more general intent of the CRM entity in question."""@en ;
+                                             rdfs:label "P2 has type"@en .
+
+
+###  http://erlangen-crm.org/140617/P46i_forms_part_of
+<http://erlangen-crm.org/140617/P46i_forms_part_of> rdf:type owl:ObjectProperty ;
+                                                    rdfs:comment """Scope note:              This property allows instances of E18 Physical Thing to be analysed into component elements.
+
+ 
+
+Component elements, since they are themselves instances of E18 Physical Thing, may be further analysed into sub-components, thereby creating a hierarchy of part decomposition. An instance of E18 Physical Thing may be shared between multiple wholes, for example two buildings may share a common wall.
+
+ 
+
+This property is intended to describe specific components that are individually documented, rather than general aspects. Overall descriptions of the structure of an instance of E18 Physical Thing are captured by the P3 has note property.
+
+ 
+
+The instances of E57 Materials of which an item of E18 Physical Thing is composed should be documented using P45 consists of (is incorporated in).
+
+Examples:              
+
+the Royal carriage (E22) forms part of the Royal train (E22)
+the “Hog’s Back” (E24) forms part of the “Fosseway” (E24)"""@en ;
+                                                    rdfs:label "P46 forms part of" .
+
+
+###  http://erlangen-crm.org/140617/P4_has_time-span
+<http://erlangen-crm.org/140617/P4_has_time-span> rdf:type owl:ObjectProperty ;
+                                                  owl:inverseOf <http://erlangen-crm.org/140617/P4i_is_time-span_of> ;
+                                                  rdfs:domain <http://erlangen-crm.org/current/E2_Temporal_Entity> ;
+                                                  rdfs:range <http://erlangen-crm.org/current/E52_Time-Span> ;
+                                                  rdfs:comment """Scope note:              This property describes the temporal confinement of an instance of an E2 Temporal Entity.
+
+ 
+
+The related E52 Time-Span is understood as the real Time-Span during which the phenomena were active, which make up the temporal entity instance. It does not convey any other meaning than a positioning on the “time-line” of chronology. The Time-Span in turn is approximated by a set of dates (E61 Time Primitive). A temporal entity can have in reality only one Time-Span, but there may exist alternative opinions about it, which we would express by assigning multiple Time-Spans. Related temporal entities may share a Time-Span. Time-Spans may have completely unknown dates but other descriptions by which we can infer knowledge.
+
+Examples:              
+
+the Yalta Conference (E7) has time-span Yalta Conference time-span (E52)"""@en ;
+                                                  rdfs:label "P4 has time-span"@en .
+
+
+###  http://erlangen-crm.org/140617/P4i_is_time-span_of
+<http://erlangen-crm.org/140617/P4i_is_time-span_of> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://erlangen-crm.org/current/E52_Time-Span> ;
+                                                     rdfs:range <http://erlangen-crm.org/current/E2_Temporal_Entity> ;
+                                                     rdfs:comment """Scope note:              This property describes the temporal confinement of an instance of an E2 Temporal Entity.
+
+ 
+
+The related E52 Time-Span is understood as the real Time-Span during which the phenomena were active, which make up the temporal entity instance. It does not convey any other meaning than a positioning on the “time-line” of chronology. The Time-Span in turn is approximated by a set of dates (E61 Time Primitive). A temporal entity can have in reality only one Time-Span, but there may exist alternative opinions about it, which we would express by assigning multiple Time-Spans. Related temporal entities may share a Time-Span. Time-Spans may have completely unknown dates but other descriptions by which we can infer knowledge.
+
+Examples:              
+
+the Yalta Conference (E7) has time-span Yalta Conference time-span (E52)"""@en ;
+                                                     rdfs:label "p4i is time-span of"@en .
+
+
+###  http://erlangen-crm.org/140617/P87_is_identified_by
+<http://erlangen-crm.org/140617/P87_is_identified_by> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <http://erlangen-crm.org/091216/P1.is_identified_by> ;
+                                                      rdfs:domain <http://erlangen-crm.org/140617/E53_Place> ;
+                                                      rdfs:range <http://erlangen-crm.org/140617/E44_Place_Appellation> ;
+                                                      rdfs:comment """This property identifies an E53 Place using an E44 Place Appellation.
+Examples of Place Appellations used to identify Places include instances of E48 Place Name, addresses, E47 Spatial Coordinates etc."""@en ;
+                                                      rdfs:label "is identified by"@en .
+
+
+###  http://purl.org/ontology/scc#Has_Administration_type
+:Has_Administration_type rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf <http://erlangen-crm.org/140617/P2_has_type> ;
+                         rdfs:domain :religious_administrative_unit ;
+                         rdfs:range :Administration_type ;
+                         rdfs:label "Has administration type"@en .
+
+
+###  http://purl.org/ontology/scc#becoming_resulting_unit
+:becoming_resulting_unit rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :resulting_to ;
+                         rdfs:domain :becoming ;
+                         rdfs:range [ rdf:type owl:Class ;
+                                      owl:unionOf ( :Diocese
+                                                    :abbey
+                                                    :archdiocese
+                                                    :archpriesthood
+                                                    :metropolis
+                                                    :prelature
+                                                  )
+                                    ] ;
+                         rdfs:label "becoming resulting unit"@en .
+
+
+###  http://purl.org/ontology/scc#elevating_resulting_unit
+:elevating_resulting_unit rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :resulting_to ;
+                          rdfs:domain :elevating ;
+                          rdfs:range [ rdf:type owl:Class ;
+                                       owl:unionOf ( :archdiocese
+                                                     :metropolis
+                                                   )
+                                     ] ;
+                          rdfs:label "elevating resulting unit"@en .
+
+
+###  http://purl.org/ontology/scc#erection_resulting_unit
+:erection_resulting_unit rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf <http://erlangen-crm.org/120111/P95_has_formed> ,
+                                            :resulting_to ;
+                         rdfs:domain :erection ;
+                         rdfs:range :administrative_unit ;
+                         rdfs:label "erection resulting unit"@en .
+
+
+###  http://purl.org/ontology/scc#followingEvent
+:followingEvent rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :successor ;
+                owl:inverseOf :precedingEvent ;
+                rdfs:domain <http://erlangen-crm.org/140617/E5_Event> ;
+                rdfs:range <http://erlangen-crm.org/140617/E5_Event> ;
+                rdfs:label "Following Event"@en .
+
+
+###  http://purl.org/ontology/scc#has_acquisition_nullius_participant
+:has_acquisition_nullius_participant rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                                     rdfs:domain :acquisition_nullius ;
+                                     rdfs:range [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :abbey
+                                                                :archeparchy
+                                                                :archpriesthood
+                                                                :collegiate
+                                                                :eparchy
+                                                                :parish
+                                                                :prelature
+                                                                :vicariate
+                                                              )
+                                                ] ;
+                                     rdfs:label "has acquisition nullius participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_acquisition_participant
+:has_acquisition_participant rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf <http://erlangen-crm.org/140617/P22i_acquired_title_through> ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( :acquisition
+                                                         :acquisition_and_loss
+                                                       )
+                                         ] ;
+                             rdfs:range [ rdf:type owl:Class ;
+                                          owl:unionOf ( :Diocese
+                                                        :metropolis
+                                                      )
+                                        ] ;
+                             rdfs:label "has acquisition participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_administration_participant
+:has_administration_participant rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf <http://erlangen-crm.org/140617/P22i_acquired_title_through> ;
+                                rdfs:domain :administration ;
+                                rdfs:range [ rdf:type owl:Class ;
+                                             owl:unionOf ( :Diocese
+                                                           :archdiocese
+                                                           :metropolis
+                                                         )
+                                           ] ;
+                                rdfs:label "has administration participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_administration_perpetual_participant
+:has_administration_perpetual_participant rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf <http://erlangen-crm.org/140617/P22i_acquired_title_through> ;
+                                          rdfs:domain :perpetual_administration ;
+                                          rdfs:range [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :Diocese
+                                                                     :metropolis
+                                                                   )
+                                                     ] ;
+                                          rdfs:label "has administration perpetual participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_arising_participant
+:has_arising_participant rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                         rdfs:domain :arising ;
+                         rdfs:range [ rdf:type owl:Class ;
+                                      owl:unionOf ( :Diocese
+                                                    :abbey
+                                                    :archdiocese
+                                                    :archpriesthood
+                                                    :metropolis
+                                                    :prelature
+                                                  )
+                                    ] ;
+                         rdfs:label "has arising participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_becoming_participant
+:has_becoming_participant rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                          rdfs:domain :becoming ;
+                          rdfs:range [ rdf:type owl:Class ;
+                                       owl:unionOf ( :Diocese
+                                                     :abbey
+                                                     :archdiocese
+                                                     :archpriesthood
+                                                     :metropolis
+                                                     :prelature
+                                                   )
+                                     ] ;
+                          rdfs:label "has becoming participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_confirmation_participant
+:has_confirmation_participant rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                              rdfs:domain :confirmation ;
+                              rdfs:range :Diocese ;
+                              rdfs:label "has confirmation participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_decay_participant
+:has_decay_participant rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://erlangen-crm.org/120111/P99_dissolved> ,
+                                          <http://erlangen-crm.org/140617/P14i_performed> ;
+                       rdfs:domain :decay ;
+                       rdfs:range [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Diocese
+                                                  :abbey
+                                                  :archdiocese
+                                                  :archeparchy
+                                                  :metropolis
+                                                  :patriarchate
+                                                )
+                                  ] ;
+                       rdfs:label "has decay participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_elevating_participant
+:has_elevating_participant rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                           rdfs:domain :elevating ;
+                           rdfs:range :Diocese ;
+                           rdfs:label "has elevating participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_incorporation_participant
+:has_incorporation_participant rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                               rdfs:domain [ rdf:type owl:Class ;
+                                             owl:unionOf ( :incorporation
+                                                           :incorporation_and_loss
+                                                         )
+                                           ] ;
+                               rdfs:range [ rdf:type owl:Class ;
+                                            owl:unionOf ( :archdiocese
+                                                          :metropolis
+                                                          :patriarchate
+                                                        )
+                                          ] ;
+                               rdfs:label "has incorporation participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_loss_participant
+:has_loss_participant rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :incorporation_and_loss
+                                                  :loss
+                                                )
+                                  ] ;
+                      rdfs:range :metropolis ;
+                      rdfs:label "has loss participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_modification_participant
+:has_modification_participant rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                              rdfs:domain :modification ;
+                              rdfs:range [ rdf:type owl:Class ;
+                                           owl:unionOf ( :archdiocese
+                                                         :metropolis
+                                                         :patriarchate
+                                                       )
+                                         ] ;
+                              rdfs:label "has modification participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_name
+:has_name rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://erlangen-crm.org/091216/P1.is_identified_by> ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( <http://erlangen-crm.org/140617/E39_Actor>
+                                      :AdministrativeArea
+                                    )
+                      ] ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( <http://erlangen-crm.org/140617/E48_Place_Name>
+                                     :name
+                                   )
+                     ] ;
+          rdfs:label "has name"@en .
+
+
+###  http://purl.org/ontology/scc#has_reestablishment_participant
+:has_reestablishment_participant rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                                 rdfs:domain :reestablishment ;
+                                 rdfs:range [ rdf:type owl:Class ;
+                                              owl:unionOf ( :Diocese
+                                                            :abbey
+                                                            :archdiocese
+                                                            :metropolis
+                                                          )
+                                            ] ;
+                                 rdfs:label "has reestablishment participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_reestablishment_titular_participant
+:has_reestablishment_titular_participant rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                                         rdfs:domain :reestablishment_as_a_titular_see ;
+                                         rdfs:range [ rdf:type owl:Class ;
+                                                      owl:unionOf ( :Diocese
+                                                                    :archdiocese
+                                                                  )
+                                                    ] ;
+                                         rdfs:label "has reestablishment titular participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_renomination_participant
+:has_renomination_participant rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                              rdfs:domain :renomination ;
+                              rdfs:range [ rdf:type owl:Class ;
+                                           owl:unionOf ( :Diocese
+                                                         :archdiocese
+                                                         :metropolis
+                                                       )
+                                         ] ;
+                              rdfs:label "has renomination participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_seat
+:has_seat rdf:type owl:ObjectProperty ;
+          rdfs:domain :Diocese ;
+          rdfs:range :city ;
+          rdfs:label "has seat"@en .
+
+
+###  http://purl.org/ontology/scc#has_separation_participant
+:has_separation_participant rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                            rdfs:domain :separation ;
+                            rdfs:range :Diocese ;
+                            rdfs:label "has separation participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_suppression_participant
+:has_suppression_participant rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                             rdfs:domain :suppression ;
+                             rdfs:range [ rdf:type owl:Class ;
+                                          owl:unionOf ( :Diocese
+                                                        :abbey
+                                                        :archdiocese
+                                                        :archeparchy
+                                                        :archpriesthood
+                                                        :collegiate
+                                                        :eparchy
+                                                        :metropolis
+                                                        :parish
+                                                        :patriarchate
+                                                        :prelature
+                                                        :vicariate
+                                                      )
+                                        ] ;
+                             rdfs:label "has suppression participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_titular_participant
+:has_titular_participant rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                         rdfs:domain :titular ;
+                         rdfs:range [ rdf:type owl:Class ;
+                                      owl:unionOf ( :Diocese
+                                                    :metropolis
+                                                  )
+                                    ] ;
+                         rdfs:label "has titular participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_transfer_participant
+:has_transfer_participant rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                          rdfs:domain :transfer ;
+                          rdfs:range [ rdf:type owl:Class ;
+                                       owl:unionOf ( :Diocese
+                                                     :archdiocese
+                                                     :metropolis
+                                                     :patriarchate
+                                                   )
+                                     ] ;
+                          rdfs:label "has transfer participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_union_participant
+:has_union_participant rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                       rdfs:domain :union ;
+                       rdfs:range [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Diocese
+                                                  :abbey
+                                                  :archpriesthood
+                                                )
+                                  ] ;
+                       rdfs:label "has union participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_unione_aeque_principaliter_participant
+:has_unione_aeque_principaliter_participant rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                                            rdfs:domain :union_aeque_principaliter ;
+                                            rdfs:range [ rdf:type owl:Class ;
+                                                         owl:unionOf ( :Diocese
+                                                                       :archdiocese
+                                                                       :metropolis
+                                                                       :prelature
+                                                                     )
+                                                       ] ;
+                                            rdfs:label "has unione aeque principaliter participant" .
+
+
+###  http://purl.org/ontology/scc#has_unione_in_persona_episcopi_participant
+:has_unione_in_persona_episcopi_participant rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                                            rdfs:domain :union_In_persona_episcopi ;
+                                            rdfs:range [ rdf:type owl:Class ;
+                                                         owl:unionOf ( :Diocese
+                                                                       :archdiocese
+                                                                       :archpriesthood
+                                                                       :metropolis
+                                                                       :prelature
+                                                                     )
+                                                       ] ;
+                                            rdfs:label "has unione in persona episcopi participant"@en .
+
+
+###  http://purl.org/ontology/scc#has_unione_plena_participant
+:has_unione_plena_participant rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <http://erlangen-crm.org/140617/P14i_performed> ;
+                              rdfs:domain :union_plena ;
+                              rdfs:range [ rdf:type owl:Class ;
+                                           owl:unionOf ( :Diocese
+                                                         :abbey
+                                                         :archdiocese
+                                                         :archpriesthood
+                                                         :metropolis
+                                                         :prelature
+                                                       )
+                                         ] ;
+                              rdfs:label "has unione plena participant" .
+
+
+###  http://purl.org/ontology/scc#headof
+:headof rdf:type owl:ObjectProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :archdiocese
+                                    :metropolis
+                                  )
+                    ] ;
+        rdfs:range :ecclesiastical_province ;
+        rdfs:label "head of"@en .
+
+
+###  http://purl.org/ontology/scc#is_acquisition_of
+:is_acquisition_of rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :is_situation_of ;
+                   rdfs:domain :acquisition ;
+                   rdfs:range :Diocese ;
+                   rdfs:comment "This property relates an acquisition event to the entity involved in the acquisition."@en ;
+                   rdfs:label "is acquisition of"@en .
+
+
+###  http://purl.org/ontology/scc#is_administration_of
+:is_administration_of rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :is_situation_of ;
+                      rdfs:domain :administration ;
+                      rdfs:range :Diocese ;
+                      rdfs:label "is administration of"@en .
+
+
+###  http://purl.org/ontology/scc#is_administration_perpetual_of
+:is_administration_perpetual_of rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :is_situation_of ;
+                                rdfs:domain :perpetual_administration ;
+                                rdfs:range :Diocese ;
+                                rdfs:label "is administration perpetual of"@en .
+
+
+###  http://purl.org/ontology/scc#is_arising_of
+:is_arising_of rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :is_situation_of ;
+               rdfs:domain :arising ;
+               rdfs:range :Diocese ;
+               rdfs:label "is arising of"@en .
+
+
+###  http://purl.org/ontology/scc#is_composed_of
+:is_composed_of rdf:type owl:ObjectProperty ;
+                owl:inverseOf :is_part_of ;
+                rdfs:domain <http://erlangen-crm.org/140617/E53_Place> ;
+                rdfs:range <http://erlangen-crm.org/140617/E39_Actor> ;
+                rdfs:label "is composed of"@en .
+
+
+###  http://purl.org/ontology/scc#is_incorporation_of
+:is_incorporation_of rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :is_situation_of ;
+                     rdfs:domain :incorporation ;
+                     rdfs:range :Diocese ;
+                     rdfs:label "is incorporation of"@en .
+
+
+###  http://purl.org/ontology/scc#is_loss_of
+:is_loss_of rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :is_situation_of ;
+            rdfs:domain :loss ;
+            rdfs:range :Diocese ;
+            rdfs:label "is loss of"@en .
+
+
+###  http://purl.org/ontology/scc#is_modifying_of
+:is_modifying_of rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :is_situation_of ;
+                 rdfs:domain :modification ;
+                 rdfs:range :Diocese ;
+                 rdfs:label "is modifying of"@en .
+
+
+###  http://purl.org/ontology/scc#is_part_of
+:is_part_of rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://erlangen-crm.org/140617/E39_Actor> ;
+            rdfs:range <http://erlangen-crm.org/140617/E53_Place> ;
+            rdfs:label "is part of"@en .
+
+
+###  http://purl.org/ontology/scc#is_part_of_province
+:is_part_of_province rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :is_part_of ;
+                     rdfs:domain :administrative_unit ;
+                     rdfs:range :AdministrativeArea ;
+                     rdfs:label "is part of province"@en .
+
+
+###  http://purl.org/ontology/scc#is_separation_of
+:is_separation_of rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :is_situation_of ;
+                  rdfs:domain :separation ;
+                  rdfs:range :Diocese ;
+                  rdfs:label "is separation of"@en .
+
+
+###  http://purl.org/ontology/scc#is_situation_of
+:is_situation_of rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Change ;
+                 rdfs:range :administrative_unit ;
+                 rdfs:comment "The property that links a situation to any object."@en ;
+                 rdfs:label "is situation of"@en .
+
+
+###  http://purl.org/ontology/scc#is_union_of
+:is_union_of rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :is_situation_of ;
+             rdfs:domain :union ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf ( :Diocese
+                                        :prelature
+                                      )
+                        ] ;
+             rdfs:label "is union of"@en .
+
+
+###  http://purl.org/ontology/scc#is_unione_aeque_principaliter_of
+:is_unione_aeque_principaliter_of rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :is_situation_of ;
+                                  rdfs:domain :union_aeque_principaliter ;
+                                  rdfs:range [ rdf:type owl:Class ;
+                                               owl:unionOf ( :Diocese
+                                                             :archpriesthood
+                                                             :metropolis
+                                                           )
+                                             ] ;
+                                  rdfs:label "is unione aeque principaliter of"@en .
+
+
+###  http://purl.org/ontology/scc#is_unione_in_persona_episcopi_of
+:is_unione_in_persona_episcopi_of rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :is_situation_of ;
+                                  rdfs:domain :union_In_persona_episcopi ;
+                                  rdfs:range :Diocese ;
+                                  rdfs:label "is unione in persona episcopi of"@en .
+
+
+###  http://purl.org/ontology/scc#is_unione_plena_of
+:is_unione_plena_of rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :is_situation_of ;
+                    rdfs:domain :union_plena ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Diocese
+                                               :archpriesthood
+                                             )
+                               ] ;
+                    rdfs:label "is unione plena of"@en .
+
+
+###  http://purl.org/ontology/scc#precedingEvent
+:precedingEvent rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :predecessor ;
+                rdfs:domain <http://erlangen-crm.org/140617/E5_Event> ;
+                rdfs:range <http://erlangen-crm.org/140617/E5_Event> ;
+                rdfs:label "Preceding Event"@en .
+
+
+###  http://purl.org/ontology/scc#precedingUnit
+:precedingUnit rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :predecessor ;
+               owl:inverseOf :succeedingUnit ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :AdministrativeArea
+                                           :administrative_unit
+                                         )
+                           ] ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( :AdministrativeArea
+                                          :administrative_unit
+                                        )
+                          ] .
+
+
+###  http://purl.org/ontology/scc#predecessor
+:predecessor rdf:type owl:ObjectProperty ;
+             rdfs:label "Predecessor"@en .
+
+
+###  http://purl.org/ontology/scc#province_is_composed_of
+:province_is_composed_of rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :is_composed_of ;
+                         rdfs:domain :AdministrativeArea ;
+                         rdfs:range :administrative_unit ;
+                         rdfs:label "province is composed of"@en .
+
+
+###  http://purl.org/ontology/scc#renomination_name
+:renomination_name rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :resulting_to ;
+                   rdfs:domain :renomination ;
+                   rdfs:range [ rdf:type owl:Restriction ;
+                                owl:onProperty :changed_name ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ;
+                   rdfs:label "renomination name"@en .
+
+
+###  http://purl.org/ontology/scc#resulting_to
+:resulting_to rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://erlangen-crm.org/120111/P92_brought_into_existence> ;
+              rdfs:domain :Change ;
+              rdfs:range :religious_administrative_unit ;
+              rdfs:label "resulting to"@en .
+
+
+###  http://purl.org/ontology/scc#succeedingUnit
+:succeedingUnit rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :successor ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :AdministrativeArea
+                                            :administrative_unit
+                                          )
+                            ] ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( :AdministrativeArea
+                                           :administrative_unit
+                                         )
+                           ] .
+
+
+###  http://purl.org/ontology/scc#successor
+:successor rdf:type owl:ObjectProperty ;
+           rdfs:label "Successor"@en .
+
+
+###  http://purl.org/ontology/scc#transfer_seat
+:transfer_seat rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :resulting_to ;
+               rdfs:domain :transfer ;
+               rdfs:range :city ;
+               rdfs:label "transfer seat"@en .
+
+
+###  http://purl.org/ontology/scc#unit_level_change
+:unit_level_change rdf:type owl:ObjectProperty ;
+                   rdfs:domain :religious_administrative_unit ;
+                   rdfs:range :religious_administrative_unit ;
+                   rdfs:label "unit level change"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://erlangen-crm.org/091216/has_FloatNumber
+<http://erlangen-crm.org/091216/has_FloatNumber> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <http://erlangen-crm.org/091216/E60.Number> ;
+                                                 rdfs:range xsd:float ;
+                                                 rdfs:label "has_FloatNumber"@en .
+
+
+###  http://erlangen-crm.org/091216/has_IntNumber
+<http://erlangen-crm.org/091216/has_IntNumber> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://erlangen-crm.org/091216/E60.Number> ;
+                                               rdfs:range xsd:int ;
+                                               rdfs:label "has_IntNumber"@en .
+
+
+###  http://erlangen-crm.org/091216/has_PrimitiveString
+<http://erlangen-crm.org/091216/has_PrimitiveString> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain [ rdf:type owl:Class ;
+                                                                   owl:unionOf ( <http://erlangen-crm.org/091216/E60.Number>
+                                                                                 <http://erlangen-crm.org/091216/E62.String>
+                                                                               )
+                                                                 ] ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:label "has_PrimitiveString"@en .
+
+
+###  http://erlangen-crm.org/091216/has_PrimitiveTime
+<http://erlangen-crm.org/091216/has_PrimitiveTime> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <http://erlangen-crm.org/091216/E61.Time_Primitive> ;
+                                                   rdfs:range xsd:dateTime ;
+                                                   rdfs:label "has_PrimitiveTime"@en .
+
+
+###  http://erlangen-crm.org/current/P82_at_some_time_within
+<http://erlangen-crm.org/current/P82_at_some_time_within> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <http://erlangen-crm.org/current/E52_Time-Span> ;
+                                                          rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                       owl:unionOf ( xsd:dateTime
+                                                                                     xsd:string
+                                                                                   )
+                                                                     ] ;
+                                                          rdfs:label "P82 at some time within"@en .
+
+
+###  http://purl.org/ontology/scc#alternative_name
+:alternative_name rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :name ;
+                  rdfs:domain :administrative_unit .
+
+
+###  http://purl.org/ontology/scc#bibliographic_reference
+:bibliographic_reference rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Change ;
+                         rdfs:range rdfs:Literal ;
+                         rdfs:label "bibliographic reference"@en .
+
+
+###  http://purl.org/ontology/scc#changed_name
+:changed_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :name ;
+              rdfs:domain :renomination ;
+              rdfs:range xsd:string .
+
+
+###  http://purl.org/ontology/scc#has_date
+:has_date rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Change ;
+          rdfs:range xsd:dateTime ;
+          rdfs:label "has date"@en .
+
+
+###  http://purl.org/ontology/scc#has_note_from_source
+:has_note_from_source rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Change ;
+                      rdfs:range rdfs:Literal ;
+                      rdfs:label "has note from source"@en .
+
+
+###  http://purl.org/ontology/scc#name
+:name rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/ontology/scc#official_name
+:official_name rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :name ;
+               rdfs:domain :administrative_unit .
+
+
+###  http://purl.org/ontology/scc#toponym
+:toponym rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :name ;
+         rdfs:domain :AdministrativeArea ;
+         rdfs:range xsd:string ;
+         rdfs:label "toponym"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Diocese
+<http://dbpedia.org/ontology/Diocese> rdf:type owl:Class ;
+                                      owl:equivalentClass :Diocese .
+
+
+###  http://erlangen-crm.org/091216/E1.CRM_Entity
+<http://erlangen-crm.org/091216/E1.CRM_Entity> rdf:type owl:Class ;
+                                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://erlangen-crm.org/140617/P2_has_type> ;
+                                                                 owl:someValuesFrom <http://erlangen-crm.org/140617/E55_Type>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://erlangen-crm.org/091216/P48.has_preferred_identifier> ;
+                                                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                 owl:onClass <http://erlangen-crm.org/091216/E1.CRM_Entity>
+                                                               ] ;
+                                               rdfs:comment "\"This class comprises all things in the universe of discourse of the CIDOC Conceptual Reference Model. It is an abstract concept providing for three general properties: 1. Identification by name or appellation, and in particular by a preferred identifier 2. Classification by type, allowing further refinement of the specific subclass an instance belongs to 3. Attachment of free text for the expression of anything not captured by formal properties With the exception of E59 Primitive Value, all other classes within the CRM are directly or indirectly specialisations of E1 CRM Entity. Example: the earthquake in Lisbon 1755 (E5)\" (string)"@en ;
+                                               rdfs:label "E1.CRM_Entity"@en .
+
+
+###  http://erlangen-crm.org/091216/E18.Physical_Thing
+<http://erlangen-crm.org/091216/E18.Physical_Thing> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://erlangen-crm.org/140617/E72_Legal_Object> ;
+                                                    rdfs:comment "This class comprises all persistent physical items with a relatively stable form, man-made or natural. Depending on the existence of natural boundaries of such things, the CRM distinguishes the instances of E19 Physical Object and E26 Physical Feature, such as holes, rivers, pieces of land, etc. Most instances of E19 Physical Object can be moved (if not too heavy), whereas features are integral to the surrounding matter. The CRM is generally not concerned with amounts of matter in fluid or gaseous states. Examples: the Cullinan Diamond (E19), the cave \"Ideon Andron\" in Crete (E26), the Mona Lisa (E22)."@en .
+
+
+###  http://erlangen-crm.org/091216/E50.Date
+<http://erlangen-crm.org/091216/E50.Date> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://erlangen-crm.org/140617/E49_Time_Appellation> ;
+                                          rdfs:label "E50.Date"@en .
+
+
+###  http://erlangen-crm.org/091216/E59.PrimitiveValue
+<http://erlangen-crm.org/091216/E59.PrimitiveValue> rdf:type owl:Class ;
+                                                    rdfs:subClassOf owl:Thing ;
+                                                    rdfs:comment "This class comprises primitive values used as documentation elements, which are not further elaborated upon within the model. As such they are not considered as elements within our universe of discourse. No specific implementation recommendations are made. Examples: ABCDEFG, 3.14, 0, 1921-01-01."@en ;
+                                                    rdfs:label "E59.PrimitiveValue"@en .
+
+
+###  http://erlangen-crm.org/091216/E60.Number
+<http://erlangen-crm.org/091216/E60.Number> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://erlangen-crm.org/091216/E59.PrimitiveValue> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://erlangen-crm.org/091216/has_FloatNumber> ;
+                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://erlangen-crm.org/091216/has_IntNumber> ;
+                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ;
+                                            owl:disjointWith <http://erlangen-crm.org/091216/E62.String> ;
+                                            rdfs:comment "\"This class comprises any encoding of computable (algebraic) values such as integers, real numbers, complex numbers, vectors, tensors etc., including intervals of these values to express limited precision. Numbers are fundamentally distinct from identifiers in continua, such as instances of E50 Date and E47 Spatial Coordinate, even though their encoding may be similar. Instances of E60 Number can be combined with each other in algebraic operations to yield other instances of E60 Number, e.g., 1+1=2. Identifiers in continua may be combined with numbers expressing distances to yield new identifiers, e.g., 1924-01-31 + 2 days = 1924-02-02. Cf. E54 Dimension. Examples: 5 (this number is of datatype int), 3+2i (this is a complex number and can be represented by ints and strings), 1.5e-04, (0.5, -0.7, 88) (the result of this computation is a float number but the expression is treated like a string of CIDOC CRM because of its brackets).\" (string)"@en ;
+                                            rdfs:label "E61.Time_Primitive"@en .
+
+
+###  http://erlangen-crm.org/091216/E61.Time_Primitive
+<http://erlangen-crm.org/091216/E61.Time_Primitive> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://erlangen-crm.org/091216/E59.PrimitiveValue> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://erlangen-crm.org/091216/has_PrimitiveTime> ;
+                                                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                    ] .
+
+
+###  http://erlangen-crm.org/091216/E62.String
+<http://erlangen-crm.org/091216/E62.String> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://erlangen-crm.org/091216/E59.PrimitiveValue> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://erlangen-crm.org/091216/has_PrimitiveString> ;
+                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ;
+                                            rdfs:comment "This class comprises the instances of E59 Primitive Values used for documentation such as free text strings, bitmaps, vector graphics etc. E62 String is not further elaborated upon within the model. Examples: the Quick Brown Fox Jumps Over The Lazy Dog, 6F 6E 54 79 70 31 0D 9E."@en ;
+                                            rdfs:label "E62.String"@en .
+
+
+###  http://erlangen-crm.org/091216/E71.Man-Made_Thing
+<http://erlangen-crm.org/091216/E71.Man-Made_Thing> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://erlangen-crm.org/140617/E70_Thing> ;
+                                                    rdfs:comment """Scope note:
+This class comprises discrete, identifiable man-made items that are documented as single units.
+These items are either intellectual products or man-made physical things, and are characterized by relative stability. They may for instance have a solid physical form, an electronic encoding, or they may be logical concepts or structures.
+
+Examples:
+- Beethoven's 5th Symphony (E73)
+- Michelangelo's David
+- Einstein's Theory of General Relativity (E73)
+- the taxon 'Fringilla coelebs Linnaeus, 1758' (E55)
+
+Definition"""@en ;
+                                                    rdfs:label "E71 Man-Made Thing"@en .
+
+
+###  http://erlangen-crm.org/120111/E63_Beginning_of_Existence
+<http://erlangen-crm.org/120111/E63_Beginning_of_Existence> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://erlangen-crm.org/140617/E5_Event> ;
+                                                            rdfs:comment "Scope note: This class comprises events that bring into existence any E77 Persistent Item. It may be used for temporal reasoning about things (intellectual products, physical items, groups of people, living beings) beginning to exist; it serves as a hook for determination of a terminus post quem and ante quem. Examples: - the birth of my child - the birth of Snoopy, my dog - the calving of the iceberg that sank the Titanic - the construction of the Eiffel Tower"@en ;
+                                                            rdfs:label "E63_Beginning_of_Existence"@en .
+
+
+###  http://erlangen-crm.org/120111/E64_End_of_Existence
+<http://erlangen-crm.org/120111/E64_End_of_Existence> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://erlangen-crm.org/140617/E5_Event> ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://erlangen-crm.org/120111/P93_took_out_of_existence> ;
+                                                                        owl:someValuesFrom <http://erlangen-crm.org/140617/E77_Persistent_Item>
+                                                                      ] ;
+                                                      rdfs:comment "Scope note: This class comprises events that end the existence of any E77 Persistent Item. It may be used for temporal reasoning about things (physical items, groups of people, living beings) ceasing to exist; it serves as a hook for determination of a terminus postquem and antequem. In cases where substance from a Persistent Item continues to exist in a new form, the process would be documented by E81 Transformation. Examples: - the death of Snoopy, my dog - the melting of the snowman - the burning of the Temple of Artemis in Ephesos by Herostratos in 356BC"@en ;
+                                                      rdfs:label "E64_End_of_Existence"@en .
+
+
+###  http://erlangen-crm.org/120111/E66_Formation
+<http://erlangen-crm.org/120111/E66_Formation> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://erlangen-crm.org/120111/E63_Beginning_of_Existence> ,
+                                                               <http://erlangen-crm.org/140617/E7_Activity> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://erlangen-crm.org/120111/P95_has_formed> ;
+                                                                 owl:someValuesFrom <http://erlangen-crm.org/140617/E74_Group>
+                                                               ] ;
+                                               rdfs:comment "\"Scope note: This class comprises events that result in the formation of a formal or informal E74 Group of people, such as a club, society, association, corporation or nation. E66 Formation does not include the arbitrary aggregation of people who do not act as a collective. The formation of an instance of E74 Group does not mean that the group is populated with members at the time of formation. In order to express the joining of members at the time of formation, the respective activity should be simultaneously an instance of both E66 Formation and E85 Joining. Examples: - the formation of the CIDOC CRM Special Interest Group - the formation of the Soviet Union - the conspiring of the murderers of Caesar\""@en ;
+                                               rdfs:label "E66_Formation"@en .
+
+
+###  http://erlangen-crm.org/120111/E68_Dissolution
+<http://erlangen-crm.org/120111/E68_Dissolution> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://erlangen-crm.org/120111/E64_End_of_Existence> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://erlangen-crm.org/120111/P99_dissolved> ;
+                                                                   owl:someValuesFrom <http://erlangen-crm.org/140617/E74_Group>
+                                                                 ] ;
+                                                 rdfs:comment "Scope note: This class comprises the events that result in the formal or informal termination of an E74 Group of people. If the dissolution was deliberate, the Dissolution event should also be instantiated as an E7 Activity. Examples: - the fall of the Roman Empire - the liquidation of Enron Corporation"@en ;
+                                                 rdfs:label "E68_Dissolution"@en .
+
+
+###  http://erlangen-crm.org/120111/E82_Actor_Appellation
+<http://erlangen-crm.org/120111/E82_Actor_Appellation> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://erlangen-crm.org/140617/E41_Appellation> ;
+                                                       rdfs:comment "Scope note: This class comprises any sort of name, number, code or symbol characteristically used to identify an E39 Actor. An E39 Actor will typically have more than one E82 Actor Appellation, and instances of E82 Actor Appellation in turn may have alternative representations. The distinction between corporate and personal names, which is particularly important in library applications, should be made by explicitly linking the E82 Actor Appellation to an instance of either E21 Person or E74 Group/E40 Legal Body. If this is not possible, the distinction can be made through the use of the P2 has type mechanism. Examples: - \"John Doe\" - \"Doe, J\" - \"the U.S. Social Security Number 246-14-2304\" - \"the Artist Formerly Known as Prince\" - \"the Master of the Flemish Madonna\" - \"Raphael's Workshop\" - \"the BrontГ« Sisters\" - \"ICOM\" - \"International Council of Museums"@en ;
+                                                       rdfs:label "E82_Actor_Appellation"@en .
+
+
+###  http://erlangen-crm.org/140617/E28_Conceptual_Object
+<http://erlangen-crm.org/140617/E28_Conceptual_Object> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://erlangen-crm.org/091216/E71.Man-Made_Thing> ;
+                                                       rdfs:comment """Scope note:
+This class comprises non-material products of our minds and other human produced data that have become objects of a discourse about their identity, circumstances of creation or historical implication. The production of such information may have been supported by the use of technical devices such as cameras or computers.
+Characteristically, instances of this class are created, invented or thought by someone, and then may be documented or communicated between persons. Instances of E28 Conceptual Object have the ability to exist on more than one particular carrier at the same time, such as paper, electronic signals, marks, audio media, paintings, photos, human memories, etc.
+They cannot be destroyed. They exist as long as they can be found on at least one carrier or in at least one human memory. Their existence ends when the last carrier and the last memory are lost.
+
+Examples:
+- Beethoven's \"Ode an die Freude\" (Ode to Joy) (E73)
+- the definition of \"ontology\" in the Oxford English Dictionary
+- the knowledge about the victory at Marathon carried by the famous runner"""@en ;
+                                                       rdfs:label "E28 Conceptual Object"@en .
+
+
+###  http://erlangen-crm.org/140617/E31_Document
+<http://erlangen-crm.org/140617/E31_Document> rdf:type owl:Class ;
+                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://erlangen-crm.org/091216/P70.documents> ;
+                                                                owl:someValuesFrom <http://erlangen-crm.org/091216/E1.CRM_Entity>
+                                                              ] ;
+                                              rdfs:comment """Scope note:
+This class comprises identifiable immaterial items that make propositions about reality.
+These propositions may be expressed in text, graphics, images, audiograms, videograms or by other similar means. Documentation databases are regarded as a special case of E31 Document. This class should not be confused with the term \"document\" in Information Technology, which is compatible with E73 Information Object.
+
+Examples:
+- the Encyclopaedia Britannica (E32)
+- the photo of the Allied Leaders at Yalta published by the UPI, 1945
+- the Doomsday Book
+
+Definition"""@en ;
+                                              rdfs:label "E31 Document"@en .
+
+
+###  http://erlangen-crm.org/140617/E35_Title
+<http://erlangen-crm.org/140617/E35_Title> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://erlangen-crm.org/140617/E41_Appellation> ;
+                                           rdfs:comment """This class comprises the names assigned to works, such as texts, artworks or pieces of music.
+Titles are proper noun phrases or verbal phrases, and should not be confused with generic object names such as \"chair\", \"painting\" or \"book\" (the latter are common nouns that stand for instances of E55 Type). Titles may be assigned by the creator of the work itself, or by a social group.
+This class also comprises the translations of titles that are used as surrogates for the original titles in different social contexts."""@en ;
+                                           rdfs:label "E35_Title"@en .
+
+
+###  http://erlangen-crm.org/140617/E39_Actor
+<http://erlangen-crm.org/140617/E39_Actor> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://erlangen-crm.org/140617/E77_Persistent_Item> ;
+                                           rdfs:comment """Scope note:
+This class comprises people, either individually or in groups, who have the potential to perform intentional actions for which they can be held responsible.
+The CRM does not attempt to model the inadvertent actions of such actors. Individual people should be documented as instances of E21 Person, whereas groups should be documented as instances of either E74 Group or its subclass E40 Legal Body.
+
+Examples:
+- London and Continental Railways (E40)
+- the Governor of the Bank of England in 1975 (E21)
+- Sir Ian McKellan (E21)"""@en ;
+                                           rdfs:label "Actor"@en .
+
+
+###  http://erlangen-crm.org/140617/E40_Legal_Body
+<http://erlangen-crm.org/140617/E40_Legal_Body> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://erlangen-crm.org/140617/E74_Group> ;
+                                                rdfs:comment """Scope note:
+This class comprises institutions or groups of people that have obtained a legal recognition as a group and can act collectively as agents.
+This means that they can perform actions, own property, create or destroy things and can be held collectively responsible for their actions like individual people. The term 'personne morale' is often used for this in French.
+
+Examples:
+- Greenpeace
+- Paveprime Ltd
+- the National Museum of Denmark"""@en ;
+                                                rdfs:label "Legal Body"@en .
+
+
+###  http://erlangen-crm.org/140617/E41_Appellation
+<http://erlangen-crm.org/140617/E41_Appellation> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://erlangen-crm.org/091216/E62.String> ,
+                                                                 <http://erlangen-crm.org/140617/E72_Legal_Object> ,
+                                                                 <http://erlangen-crm.org/140617/E90_Symbolic_Object> ;
+                                                 rdfs:comment """This class comprises signs, either meaningful or not, or arrangements of signs following a specific syntax, that are used or can be used to refer to and identify a specific instance of some class or category within a certain context.
+Instances of E41 Appellation do not identify things by their meaning, even if they happen to have one, but instead by convention, tradition, or agreement. Instances of E41 Appellation are cultural constructs; as such, they have a context, a history, and a use in time and space by some group of users. A given instance of E41 Appellation can have alternative forms, i.e., other instances of E41 Appellation that are always regarded as equivalent independent from the thing it denotes.
+Specific subclasses of E41 Appellation should be used when instances of E41 Appellation of a characteristic form are used for particular objects. Instances of E49 Time Appellation, for example, which take the form of instances of E50 Date, can be easily recognised.
+E41 Appellation should not be confused with the act of naming something. Cf. E15 Identifier Assignment"""@en ;
+                                                 rdfs:label "Appellation"@en .
+
+
+###  http://erlangen-crm.org/140617/E42_Identifier
+<http://erlangen-crm.org/140617/E42_Identifier> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://erlangen-crm.org/140617/E41_Appellation> ;
+                                                rdfs:comment """This class comprises strings or codes assigned to instances of E1 CRM Entity in order to identify them uniquely and permanently
+            within the context of one or more organisations. Such codes are often known as inventory numbers, registration codes, etc. and are
+            typically composed of alphanumeric sequences. The class E42 Identifier is not normally used for machine-generated identifiers used for
+            automated processing unless these are also used by human agents."""@en ;
+                                                rdfs:label "Identifier"@en .
+
+
+###  http://erlangen-crm.org/140617/E44_Place_Appellation
+<http://erlangen-crm.org/140617/E44_Place_Appellation> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://erlangen-crm.org/140617/E41_Appellation> ;
+                                                       owl:disjointWith <http://erlangen-crm.org/140617/E49_Time_Appellation> ;
+                                                       rdfs:comment """This class comprises any sort of identifier characteristically used to refer to an E53 Place.
+Instances of E44 Place Appellation may vary in their degree of precision and their meaning may vary over time - the same instance of E44 Place Appellation may be used to refer to several places, either because of cultural shifts, or because objects used as reference points have moved around. Instances of E44 Place Appellation can be extremely varied in form: postal addresses, instances of E47 Spatial Coordinate, and parts of buildings can all be considered as instances of E44 Place Appellation."""@en ;
+                                                       rdfs:label "Place Appellation"@en .
+
+
+###  http://erlangen-crm.org/140617/E47_Spatial_Coordinates
+<http://erlangen-crm.org/140617/E47_Spatial_Coordinates> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://erlangen-crm.org/140617/E44_Place_Appellation> ;
+                                                         rdfs:comment """This class comprises the textual or numeric information required to locate specific instances of E53 Place within schemes of spatial identification.
+Coordinates are a specific form of E44 Place Appellation, that is, a means of referring to a particular E53 Place. Coordinates are not restricted to longitude, latitude and altitude. Any regular system of reference that maps onto an E19 Physical Object can be used to generate coordinates."""@en ;
+                                                         rdfs:label "Spatial Coordinates"@en .
+
+
+###  http://erlangen-crm.org/140617/E48_Place_Name
+<http://erlangen-crm.org/140617/E48_Place_Name> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://erlangen-crm.org/140617/E44_Place_Appellation> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :toponym ;
+                                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                  owl:onDataRange xsd:string
+                                                                ] ;
+                                                rdfs:comment """This class comprises particular and common forms of E44 Place Appellation.
+Place Names may change their application over time: the name of an E53 Place may change, and a name may be reused for a different E53 Place. Instances of E48 Place Name are typically subject to place name gazetteers."""@en ;
+                                                rdfs:label "Place Name"@en .
+
+
+###  http://erlangen-crm.org/140617/E49_Time_Appellation
+<http://erlangen-crm.org/140617/E49_Time_Appellation> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://erlangen-crm.org/140617/E41_Appellation> ;
+                                                      rdfs:comment """This class comprises all forms of names or codes, such as historical periods, and dates, which are characteristically used to refer to a specific E52 Time-Span.
+The instances of E49 Time Appellation may vary in their degree of precision, and they may be relative to other time frames, “Before Christ” for example. Instances of E52 Time-Span are often defined by reference to a cultural period or an event e.g. ‘the duration of the Ming Dynasty’."""@en ;
+                                                      rdfs:label "Time Appellation"@en .
+
+
+###  http://erlangen-crm.org/140617/E53_Place
+<http://erlangen-crm.org/140617/E53_Place> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://erlangen-crm.org/091216/E1.CRM_Entity> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://erlangen-crm.org/091216/P59I.is_located_on_or_within> ;
+                                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                           ] ;
+                                           owl:disjointWith <http://erlangen-crm.org/current/E52_Time-Span> ;
+                                           rdfs:comment """Scope note:              This class comprises extents in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter.
+
+ 
+
+The instances of E53 Place are usually determined by reference to the position of “immobile” objects such as buildings, cities, mountains, rivers, or dedicated geodetic marks. A Place can be determined by combining a frame of reference and a location with respect to this frame. It may be identified by one or more instances of E44 Place Appellation.
+
+ 
+
+It is sometimes argued that instances of E53 Place are best identified by global coordinates or absolute reference systems. However, relative references are often more relevant in the context of cultural documentation and tend to be more precise. In particular, we are often interested in position in relation to large, mobile objects, such as ships. For example, the Place at which Nelson died is known with reference to a large mobile object – H.M.S Victory. A resolution of this Place in terms of absolute coordinates would require knowledge of the movements of the vessel and the precise time of death, either of which may be revised, and the result would lack historical and cultural relevance.
+
+ 
+
+Any object can serve as a frame of reference for E53 Place determination. The model foresees the notion of a \"section\" of an E19 Physical Object as a valid E53 Place determination.
+
+Examples:              
+
+      the extent of the UK in the year 2003
+      the position of the hallmark on the inside of my wedding ring
+      the place referred to in the phrase: “Fish collected at three miles north of the confluence of the Arve and the Rhone”
+      here -> <-"""@en ;
+                                           rdfs:label "E53 Place"@en .
+
+
+###  http://erlangen-crm.org/140617/E55_Type
+<http://erlangen-crm.org/140617/E55_Type> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://erlangen-crm.org/140617/E28_Conceptual_Object> ;
+                                          rdfs:comment """This class comprises concepts denoted by terms from thesauri and controlled vocabularies used to characterize and classify instances of CRM classes. Instances of E55 Type represent concepts in contrast to instances of E41 Appellation which are used to name instances of CRM classes.
+E55 Type is the CRM's interface to domain specific ontologies and thesauri. These can be represented in the CRM as subclasses of E55 Type, forming hierarchies of terms, i.e. instances of E55 Type linked via P127 has broader term (has narrower term). Such hierarchies may be extended with additional properties.
+
+Examples:
+- weight, length, depth [types of E54 Dimension]
+- portrait, sketch, animation [types of E38 image]
+- French, English, German [E56]
+- excellent, good, poor [types of E3 Condition State]
+- Ford Model T, chop stick [types of E22 Man-Made Object]
+- cave, doline, scratch [types of E26 Physical Feature]
+- poem, short story [types of E33 Linguistic Object]
+- wedding, earthquake, skirmish [types of E5 Event]""" ;
+                                          rdfs:label "E55 Type"@en .
+
+
+###  http://erlangen-crm.org/140617/E5_Event
+<http://erlangen-crm.org/140617/E5_Event> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://erlangen-crm.org/current/E4_Period> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://erlangen-crm.org/120111/P12_occurred_in_the_presence_of> ;
+                                                            owl:someValuesFrom <http://erlangen-crm.org/140617/E77_Persistent_Item>
+                                                          ] ;
+                                          rdfs:comment """This class comprises changes of states in cultural, social or physical systems, regardless of scale, brought about by a series or group of coherent physical, cultural, technological or legal phenomena. Such changes of state will affect instances of E77 Persistent Item or its subclasses.
+
+ 
+
+The distinction between an E5 Event and an E4 Period is partly a question of the scale of observation. Viewed at a coarse level of detail, an E5 Event is an ‘instantaneous’ change of state. At a fine level, the E5 Event can be analysed into its component phenomena within a space and time frame, and as such can be seen as an E4 Period. The reverse is not necessarily the case: not all instances of E4 Period give rise to a noteworthy change of state."""@en ;
+                                          rdfs:label "E5 Event"@en .
+
+
+###  http://erlangen-crm.org/140617/E70_Thing
+<http://erlangen-crm.org/140617/E70_Thing> rdf:type owl:Class ;
+                                           rdfs:label "E70 Thing"@en .
+
+
+###  http://erlangen-crm.org/140617/E72_Legal_Object
+<http://erlangen-crm.org/140617/E72_Legal_Object> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://erlangen-crm.org/140617/E70_Thing> ;
+                                                  rdfs:comment """Scope note:              This class comprises those material or immaterial items to which instances of E30 Right, such as the right of ownership or use, can be applied.
+
+ 
+
+This is true for all E18 Physical Thing. In the case of instances of E28 Conceptual Object, however, the identity of the E28 Conceptual Object or the method of its use may be too ambiguous to reliably establish instances of E30 Right, as in the case of taxa and inspirations. Ownership of corporations is currently regarded as out of scope of the CRM.
+
+Examples:              
+
+the Cullinan diamond (E19)
+definition of the CIDOC Conceptual Reference Model Version 2.1 (E73)"""@en ;
+                                                  rdfs:label "E72 Legal Object"@en .
+
+
+###  http://erlangen-crm.org/140617/E74_Group
+<http://erlangen-crm.org/140617/E74_Group> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://erlangen-crm.org/140617/E39_Actor> ;
+                                           rdfs:comment """Scope note:
+This class comprises any gatherings or organizations of two or more people that act collectively or in a similar way due to any form of unifying relationship. In the wider sense this class also comprises official positions which used to be regarded in certain contexts as one actor, independent of the current holder of the office, such as the president of a country. A joint pseudonym (i.e., a name that seems indicative of an individual but that is actually used as a persona by two or more people) is a particular case of E74 Group.
+A gathering of people becomes an E74 Group when it exhibits organizational characteristics usually typified by a set of ideas or beliefs held in common, or actions performed together. These might be communication, creating some common artifact, a common purpose such as study, worship, business, sports, etc. Nationality can be modelled as membership in an E74 Group (cf. HumanML markup). Married couples and other concepts of family are regarded as particular examples of E74 Group.
+
+Examples:
+- the impressionists
+- the Navajo
+- the Greeks
+- the peace protestors in n New York City on February 15 2003
+- Exxon-Mobil
+- King Solomon and his wives
+- the President of the Swiss Confederation
+- Nicolas Bourbaki
+- Betty Crocker"""@en ;
+                                           rdfs:label "Group"@en .
+
+
+###  http://erlangen-crm.org/140617/E77_Persistent_Item
+<http://erlangen-crm.org/140617/E77_Persistent_Item> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://erlangen-crm.org/091216/E1.CRM_Entity> ;
+                                                     owl:disjointWith <http://erlangen-crm.org/current/E2_Temporal_Entity> ;
+                                                     rdfs:comment """Scope note:
+This class comprises items that have a persistent identity, sometimes known as \"endurants\" in philosophy.
+They can be repeatedly recognized within the duration of their existence by identity criteria rather than by continuity or observation. Persistent Items can be either physical entities, such as people, animals or things, or conceptual entities such as ideas, concepts, products of the imagination or common names.
+The criteria that determine the identity of an item are often difficult to establish -; the decision depends largely on the judgement of the observer. For example, a building is regarded as no longer existing if it is dismantled and the materials reused in a different configuration. On the other hand, human beings go through radical and profound changes during their life-span, affecting both material composition and form, yet preserve their identity by other criteria. Similarly, inanimate objects may be subject to exchange of parts and matter. The class E77 Persistent Item does not take any position about the nature of the applicable identity criteria and if actual knowledge about identity of an instance of this class exists. There may be cases, where the identity of an E77 Persistent Item is not decidable by a certain state of knowledge.
+The main classes of objects that fall outside the scope the E77 Persistent Item class are temporal objects such as periods, events and acts, and descriptive properties.
+
+Examples:
+- Leonardo da Vinci
+- Stonehenge
+- the hole in the ozone layer
+- the First Law of Thermodynamics
+- the Bermuda Triangle"""@en ;
+                                                     rdfs:label "E77_Persistent Item"@en .
+
+
+###  http://erlangen-crm.org/140617/E7_Activity
+<http://erlangen-crm.org/140617/E7_Activity> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://erlangen-crm.org/140617/E5_Event> ;
+                                             rdfs:comment """Scope note:
+This class comprises actions intentionally carried out by instances of E39 Actor that result in changes of state in the cultural, social, or physical systems documented.
+This notion includes complex, composite and long-lasting actions such as the building of a settlement or a war, as well as simple, short-lived actions such as the opening of a door.
+
+Examples:
+- the Battle of Stalingrad
+- the Yalta Conference
+- my birthday celebration 28-6-1995
+- the writing of \"Faust\" by Goethe (E65)
+- the formation of the Bauhaus 1919 (E66)
+- calling the place identified by TGN '7017998' 'Quyunjig' by the people of Iraq"""@en ;
+                                             rdfs:label "E7 Activity"@en .
+
+
+###  http://erlangen-crm.org/140617/E8_Acquisition
+<http://erlangen-crm.org/140617/E8_Acquisition> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://erlangen-crm.org/140617/E7_Activity> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://erlangen-crm.org/140617/P22i_acquired_title_through> ;
+                                                                  owl:someValuesFrom <http://erlangen-crm.org/140617/E39_Actor>
+                                                                ] ;
+                                                rdfs:comment """Scope note:
+This class comprises transfers of legal ownership from one or more instances of E39 Actor to one or more other instances of E39 Actor.
+The class also applies to the establishment or loss of ownership of instances of E18 Physical Thing. It does not, however, imply changes of any other kinds of right. The recording of the donor and/or recipient is optional. It is possible that in an instance of E8 Acquisition there is either no donor or no recipient. Depending on the circumstances, it may describe:
+1. the beginning of ownership
+2. the end of ownership
+3. the transfer of ownership
+4. the acquisition from an unknown source
+5. the loss of title due to destruction of the item
+It may also describe events where a collector appropriates legal title, for example by annexation or field collection. The interpretation of the museum notion of \"accession\" differs between institutions. The CRM therefore models legal ownership (E8 Acquisition) and physical custody (E10 Transfer of Custody) separately. Institutions will then model their specific notions of accession and deaccession as combinations of these.
+
+Examples:
+- the collection of a hammer-head shark of the genus Sphyrna (Carchariniformes) XXXtbc by John Steinbeck and Edward Ricketts at Puerto Escondido in the Gulf of Mexico on March 25th, 1940
+- the acquisition of El Greco's \"The Apostles Peter and Paul\" by the State Hermitage in Saint Petersburg
+- the loss of my stuffed chaffinch 'Fringilla coelebs Linnaeus, 1758' due to insect damage last year"""@en ;
+                                                rdfs:label "E8_Acquisition"@en .
+
+
+###  http://erlangen-crm.org/140617/E90_Symbolic_Object
+<http://erlangen-crm.org/140617/E90_Symbolic_Object> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://erlangen-crm.org/140617/E28_Conceptual_Object> ,
+                                                                     <http://erlangen-crm.org/140617/E72_Legal_Object> ;
+                                                     rdfs:comment """Scope note:
+This class comprises identifiable symbols and any aggregation of symbols, such as characters, identifiers, traffic signs, emblems, texts, data sets, images, musical scores, multimedia objects, computer program code or mathematical formulae that have an objectively recognizable structure and that are documented as single units. It includes sets of signs of any nature, which may serve to designate something, or to communicate some propositional content.
+An instance of E90 Symbolic Object does not depend on a specific physical carrier, which can include human memory, and it can exist on one or more carriers simultaneously. An instance of E90 Symbolic Object may or may not have a specific meaning, for example an arbitrary character string.
+In some cases, the content of an instance of E90 Symbolic Object may completely be represented by a serialized digital content model, such as a sequence of ASCII-encoded characters, an XML or HTML document, or a TIFF image. The property P3 has note allows for the description of this content model. In order to disambiguate which symbolic level is the carrier of the meaning, the property P3.1 has type can be used to specify the encoding (e.g. \"bit\", \"Latin character\", RGB pixel).
+
+Examples:
+- ecognizabl’
+- The “no-smoking” sign (E36)
+- “BM000038850.JPG” (E75)
+- image BM000038850.JPG from the Clayton Herbarium in London (E38)
+- The distribution of form, tone and colour found on Leonardo da Vinci’s painting named “Mona Lisa” in daylight (E38)
+- The Italian text of Dante’s “Divina Commedia” as found in the authoritative critical edition La Commedia secondo l’antica vulgata a cura di Giorgio Petrocchi, Milano: Mondadori, 1966-67 (= Le Opere di Dante Alighieri, Edizione Nazionale a cura della Società Dantesca Italiana, VII, 1-4) (E33)
+
+Definition"""@en ;
+                                                     rdfs:label "E90 Symbolic Object"@en .
+
+
+###  http://erlangen-crm.org/current/E2_Temporal_Entity
+<http://erlangen-crm.org/current/E2_Temporal_Entity> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://erlangen-crm.org/091216/E1.CRM_Entity> ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://erlangen-crm.org/140617/P4_has_time-span> ;
+                                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                     ] ;
+                                                     rdfs:comment """Scope note:
+This class comprises all phenomena, such as the instances of E4 Periods and E5 Events, which happen over a limited extent in time. This extent in time must be contiguous, i.e., without gaps. In case the defining kinds of phenomena for an instance of E2 Temporal Entity cease to happen, and occur later again at another time, we regard that the former instance of E2 Temporal Entity has ended and a new instance has come into existence. In more intuitive terms, the same event cannot happen twice.
+
+In some contexts, such phenomena are also called perdurants. This class is disjoint from E77 Persistent Item and is an abstract class that typically has no direct instances. E2 Temporal Entity is specialized into E4 Period, which applies to a particular geographic area (defined with a greater or lesser degree of precision), and E3 Condition State, which applies to instances of E18 Physical Thing.
+
+
+Examples:
+- Bronze Age (E4) (Childe, 1963)
+- the earthquake in Lisbon 1755 (E5) (Chester, 2001)
+- the Peterhof Palace near Saint Petersburg being in ruins from 1944 – 1946 (E3) (Maddox, 2015)
+
+
+In First Order Logic:
+E2(x) ⊃ E1(x)"""@en ;
+                                                     rdfs:label "E2 Temporal Entity"@en .
+
+
+###  http://erlangen-crm.org/current/E3_Condition_State
+<http://erlangen-crm.org/current/E3_Condition_State> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://erlangen-crm.org/current/E2_Temporal_Entity> ;
+                                                     rdfs:label "E3 Condition State"@en .
+
+
+###  http://erlangen-crm.org/current/E4_Period
+<http://erlangen-crm.org/current/E4_Period> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://erlangen-crm.org/current/E2_Temporal_Entity> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://erlangen-crm.org/120111/P7_took_place_at> ;
+                                                              owl:someValuesFrom <http://erlangen-crm.org/140617/E53_Place>
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://erlangen-crm.org/140617/P120_occurs_before> ;
+                                                              owl:someValuesFrom <http://erlangen-crm.org/current/E2_Temporal_Entity>
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://erlangen-crm.org/140617/P120i_occurs_after> ;
+                                                              owl:someValuesFrom <http://erlangen-crm.org/current/E2_Temporal_Entity>
+                                                            ] ;
+                                            rdfs:comment """Scope note:
+This class comprises sets of coherent phenomena or cultural manifestations bounded in time and space.
+It is the social or physical coherence of these phenomena that identify an E4 Period and not the associated spatio-temporal bounds. These bounds are a mere approximation of the actual process of growth, spread and retreat. Consequently, different periods can overlap and coexist in time and space, such as when a nomadic culture exists in the same area as a sedentary culture.
+Typically this class is used to describe prehistoric or historic periods such as the \"Neolithic Period\", the \"Ming Dynasty\" or the \"McCarthy Era\". There are however no assumptions about the scale of the associated phenomena. In particular all events are seen as synthetic processes consisting of coherent phenomena. Therefore E4 Period is a superclass of E5 Event. For example, a modern clinical E67 Birth can be seen as both an atomic E5 Event and as an E4 Period that consists of multiple activities performed by multiple instances of E39 Actor.
+There are two different conceptualisations of 'artistic style', defined either by physical features or by historical context. For example, \"Impressionism\" can be viewed as a period lasting from approximately 1870 to 1905 during which paintings with particular characteristics were produced by a group of artists that included (among others) Monet, Renoir, Pissarro, Sisley and Degas. Alternatively, it can be regarded as a style applicable to all paintings sharing the characteristics of the works produced by the Impressionist painters, regardless of historical context. The first interpretation is an E4 Period, and the second defines morphological object types that fall under E55 Type.
+Another specific case of an E4 Period is the set of activities and phenomena associated with a settlement, such as the populated period of Nineveh.
+
+Examples:
+- Jurassic
+- European Bronze Age
+- Italian Renaissance
+- Thirty Years War
+- Sturm und Drang
+- Cubism"""@en ;
+                                            rdfs:label "E4 Period"@en .
+
+
+###  http://erlangen-crm.org/current/E52_Time-Span
+<http://erlangen-crm.org/current/E52_Time-Span> rdf:type owl:Class ;
+                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://erlangen-crm.org/140617/P4i_is_time-span_of> ;
+                                                                  owl:someValuesFrom <http://erlangen-crm.org/current/E2_Temporal_Entity>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://erlangen-crm.org/091216/P82.at_some_time_within> ;
+                                                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                ] ;
+                                                rdfs:comment """Scope note:
+This class comprises abstract temporal extents, in the sense of Galilean physics, having a beginning, an end and a duration.
+Time Span has no other semantic connotations. Time-Spans are used to define the temporal extent of instances of E4 Period, E5 Event and any other phenomena valid for a certain time. An E52 Time-Span may be identified by one or more instances of E49 Time Appellation.
+Since our knowledge of history is imperfect, instances of E52 Time-Span can best be considered as approximations of the actual Time-Spans of temporal entities. The properties of E52 Time-Span are intended to allow these approximations to be expressed precisely. An extreme case of approximation, might, for example, define an E52 Time-Span having unknown beginning, end and duration. Used as a common E52 Time-Span for two events, it would nevertheless define them as being simultaneous, even if nothing else was known.
+Automatic processing and querying of instances of E52 Time-Span is facilitated if data can be parsed into an E61 Time Primitive."""@en ;
+                                                rdfs:label "E52 Time-Span"@en .
+
+
+###  http://purl.org/ontology/scc#Administration_type
+:Administration_type rdf:type owl:Class ;
+                     rdfs:subClassOf <http://erlangen-crm.org/140617/E55_Type> ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :bibliographic_reference ;
+                                       owl:someValuesFrom rdfs:Literal
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :has_date ;
+                                       owl:someValuesFrom xsd:dateTime
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :has_note_from_source ;
+                                       owl:someValuesFrom xsd:dateTime
+                                     ] ;
+                     rdfs:label "Administration type"@en .
+
+
+###  http://purl.org/ontology/scc#AdministrativeArea
+:AdministrativeArea rdf:type owl:Class ;
+                    rdfs:subClassOf :populated_place ;
+                    rdfs:label "Administrative Area"@en .
+
+
+###  http://purl.org/ontology/scc#Apostolic_see
+:Apostolic_see rdf:type owl:Class ;
+               rdfs:subClassOf :religious_administrative_unit ;
+               rdfs:comment "Episcopal jurisdiction of the Catholic Church in Rome, Italy"@en ;
+               rdfs:label "Apostolic see"@en ;
+               rdfs:seeAlso "https://www.wikidata.org/wiki/Q1147274"@en .
+
+
+###  http://purl.org/ontology/scc#Bibliography
+:Bibliography rdf:type owl:Class ;
+              rdfs:subClassOf <http://erlangen-crm.org/140617/E31_Document> ;
+              rdfs:label "Bibliographie"@de ,
+                         "Bibliography"@en .
+
+
+###  http://purl.org/ontology/scc#Change
+:Change rdf:type owl:Class ;
+        rdfs:subClassOf <http://erlangen-crm.org/140617/E7_Activity> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :bibliographic_reference ;
+                          owl:someValuesFrom rdfs:Literal
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :has_note_from_source ;
+                          owl:someValuesFrom rdfs:Literal
+                        ] ;
+        rdfs:comment "The Change concept is the super class of all types of change."@en ;
+        rdfs:label "Change"@en .
+
+
+###  http://purl.org/ontology/scc#Conclave
+:Conclave rdf:type owl:Class ;
+          rdfs:subClassOf <http://erlangen-crm.org/140617/E5_Event> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://erlangen-crm.org/140617/P117_occurs_during> ;
+                            owl:someValuesFrom <http://erlangen-crm.org/current/E2_Temporal_Entity>
+                          ] ;
+          rdfs:label "Conclave"@en ;
+          rdfs:seeAlso "https://www.wikidata.org/wiki/Q186431" .
+
+
+###  http://purl.org/ontology/scc#Diocese
+:Diocese rdf:type owl:Class ;
+         owl:equivalentClass <https://www.wikidata.org/entity/Q665487> ;
+         rdfs:subClassOf :religious_administrative_unit ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :becoming_resulting_unit ;
+                           owl:someValuesFrom :becoming
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :elevating_resulting_unit ;
+                           owl:someValuesFrom :administrative_unit
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :has_seat ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :city
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :is_part_of ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :ecclesiastical_province
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :alternative_name ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :official_name ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :changed_name ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ;
+         rdfs:comment "Christian district or see under the supervision of a bishop"@en ;
+         rdfs:label "diocese"@en ;
+         rdfs:seeAlso "https://www.wikidata.org/wiki/Q665487" .
+
+
+###  http://purl.org/ontology/scc#Geographical_Place_Type
+:Geographical_Place_Type rdf:type owl:Class ;
+                         rdfs:subClassOf <http://erlangen-crm.org/140617/E55_Type> ;
+                         rdfs:label "Geographical Place Type"@en .
+
+
+###  http://purl.org/ontology/scc#Reign
+:Reign rdf:type owl:Class ;
+       rdfs:subClassOf <http://erlangen-crm.org/current/E4_Period> ;
+       rdfs:label "Reign"@en ;
+       rdfs:seeAlso "https://www.wikidata.org/wiki/Q7310094" .
+
+
+###  http://purl.org/ontology/scc#Religious_Administration_Type
+:Religious_Administration_Type rdf:type owl:Class ;
+                               rdfs:subClassOf :Administration_type ;
+                               rdfs:label "Religious_Administration_Type"@en .
+
+
+###  http://purl.org/ontology/scc#Religious_Administrative_Area
+:Religious_Administrative_Area rdf:type owl:Class ;
+                               rdfs:subClassOf :AdministrativeArea ,
+                                               :Geographical_Place_Type ;
+                               rdfs:comment "This class represents the clerical administrative area. It can be used to represents Diocese, Parish, etc."@en ;
+                               rdfs:label "Religious Administrative Area"@en .
+
+
+###  http://purl.org/ontology/scc#Secular_Administrative_Area
+:Secular_Administrative_Area rdf:type owl:Class ;
+                             rdfs:subClassOf :AdministrativeArea ,
+                                             :Geographical_Place_Type ;
+                             rdfs:label "Secular Administrative Area"@en .
+
+
+###  http://purl.org/ontology/scc#Sede_vacante
+:Sede_vacante rdf:type owl:Class ;
+              rdfs:subClassOf <http://erlangen-crm.org/current/E4_Period> ;
+              rdfs:label "sede vacante"@en ;
+              rdfs:seeAlso "https://dbpedia.org/page/Sede_vacante" ,
+                           "https://www.wikidata.org/wiki/Q48017" .
+
+
+###  http://purl.org/ontology/scc#abbey
+:abbey rdf:type owl:Class ;
+       rdfs:subClassOf :religious_administrative_unit ;
+       rdfs:comment "Monastery or convent, under the authority of an abbot or an abbess"@en ;
+       rdfs:label "abbey"@en ;
+       rdfs:seeAlso "https://www.wikidata.org/wiki/Q160742"@en .
+
+
+###  http://purl.org/ontology/scc#acquisition
+:acquisition rdf:type owl:Class ;
+             rdfs:subClassOf <http://erlangen-crm.org/140617/E8_Acquisition> ,
+                             :territorial_change ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :has_acquisition_participant ;
+                               owl:someValuesFrom [ rdf:type owl:Class ;
+                                                    owl:unionOf ( :Diocese
+                                                                  :metropolis
+                                                                )
+                                                  ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :is_acquisition_of ;
+                               owl:someValuesFrom :Diocese
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :has_date ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:dateTime
+                             ] ;
+             rdfs:comment "diocese acquiring the territory of a suppressed diocese"@en ;
+             rdfs:label "acquisition"@en .
+
+
+###  http://purl.org/ontology/scc#acquisition_and_loss
+:acquisition_and_loss rdf:type owl:Class ;
+                      rdfs:subClassOf :territorial_change ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :has_acquisition_participant ;
+                                        owl:someValuesFrom :metropolis
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :has_loss_participant ;
+                                        owl:someValuesFrom :metropolis
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :is_acquisition_of ;
+                                        owl:someValuesFrom :Diocese
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :is_loss_of ;
+                                        owl:someValuesFrom :metropolis
+                                      ] ;
+                      rdfs:comment "metropolitan diocese that acquires the territory of a suppressed diocese and at the same time loses one or more suffragan dioceses"@en ;
+                      rdfs:label "acquisition and loss"@en .
+
+
+###  http://purl.org/ontology/scc#acquisition_nullius
+:acquisition_nullius rdf:type owl:Class ;
+                     rdfs:subClassOf :territorial_change ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :has_acquisition_nullius_participant ;
+                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                            owl:unionOf ( :abbey
+                                                                          :archeparchy
+                                                                          :archpriesthood
+                                                                          :collegiate
+                                                                          :eparchy
+                                                                          :parish
+                                                                          :prelature
+                                                                          :vicariate
+                                                                        )
+                                                          ]
+                                     ] ;
+                     rdfs:comment "the abbey or the prelature acquires the rank of nullius dioecesis"@en ;
+                     rdfs:label "acquisition nullius"@en .
+
+
+###  http://purl.org/ontology/scc#administration
+:administration rdf:type owl:Class ;
+                rdfs:subClassOf <http://erlangen-crm.org/140617/E8_Acquisition> ,
+                                :governing_change ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has_administration_participant ;
+                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :Diocese
+                                                                     :archdiocese
+                                                                     :metropolis
+                                                                   )
+                                                     ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :is_administration_of ;
+                                  owl:allValuesFrom :Diocese
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has_date ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:dateTime
+                                ] ;
+                rdfs:comment "diocese that administers another diocese or is administered by the bishop of another diocese"@en ;
+                rdfs:label "administration"@en .
+
+
+###  http://purl.org/ontology/scc#administrative_unit
+:administrative_unit rdf:type owl:Class ;
+                     rdfs:subClassOf :organization ;
+                     rdfs:comment "Unis for administration purposes, with or without its own local government"@en ;
+                     rdfs:label "administrative unit"@en .
+
+
+###  http://purl.org/ontology/scc#alternative_name
+:alternative_name rdf:type owl:Class ;
+                  rdfs:subClassOf :name .
+
+
+###  http://purl.org/ontology/scc#archdiocese
+:archdiocese rdf:type owl:Class ;
+             rdfs:subClassOf :religious_administrative_unit ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :headof ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :ecclesiastical_province
+                             ] ;
+             rdfs:comment "District or see under the supervision of a bishop, with more significance than a diocese"@en ;
+             rdfs:label "archdiocese"@en ;
+             rdfs:seeAlso "https://www.wikidata.org/wiki/Q2072238"@en .
+
+
+###  http://purl.org/ontology/scc#archeparchy
+:archeparchy rdf:type owl:Class ;
+             rdfs:subClassOf :religious_administrative_unit ;
+             rdfs:comment "A diocese of the Eastern Christian Church"@en ;
+             rdfs:label "archeparchy"@en ;
+             rdfs:seeAlso "https://www.wikidata.org/wiki/Q2288631"@en ;
+             <http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs> "https://www.wikidata.org/entity/Q2288631" .
+
+
+###  http://purl.org/ontology/scc#archpriesthood
+:archpriesthood rdf:type owl:Class ;
+                rdfs:subClassOf :religious_administrative_unit ;
+                rdfs:comment "territory that includes several parishes governed by an archpriest"@en ;
+                rdfs:label "archpriesthood"@en ;
+                rdfs:seeAlso "https://www.wikidata.org/wiki/Q47999270"@en .
+
+
+###  http://purl.org/ontology/scc#arising
+:arising rdf:type owl:Class ;
+         rdfs:subClassOf :status_change ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :has_arising_participant ;
+                           owl:someValuesFrom [ rdf:type owl:Class ;
+                                                owl:unionOf ( :Diocese
+                                                              :abbey
+                                                              :archdiocese
+                                                              :archpriesthood
+                                                              :prelature
+                                                            )
+                                              ]
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :is_arising_of ;
+                           owl:someValuesFrom :Diocese
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :has_date ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:dateTime
+                         ] ;
+         rdfs:comment "dioceses resulting from the union of other dioceses"@en ;
+         rdfs:label "arising"@en .
+
+
+###  http://purl.org/ontology/scc#becoming
+:becoming rdf:type owl:Class ;
+          rdfs:subClassOf :governing_change ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :becoming_resulting_unit ;
+                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :Diocese
+                                                               :abbey
+                                                               :archdiocese
+                                                               :archpriesthood
+                                                               :metropolis
+                                                               :prelature
+                                                             )
+                                               ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :has_becoming_participant ;
+                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :Diocese
+                                                               :abbey
+                                                               :archdiocese
+                                                               :archpriesthood
+                                                               :metropolis
+                                                               :prelature
+                                                             )
+                                               ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :has_date ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:dateTime
+                          ] ;
+          rdfs:comment "diocese giving rise to a new diocesan organisation"@en ;
+          rdfs:label "becoming"@en .
+
+
+###  http://purl.org/ontology/scc#changed_name
+:changed_name rdf:type owl:Class ;
+              rdfs:subClassOf :name .
+
+
+###  http://purl.org/ontology/scc#city
+:city rdf:type owl:Class ;
+      rdfs:subClassOf :Secular_Administrative_Area ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :transfer_seat ;
+                        owl:someValuesFrom :transfer
+                      ] ;
+      rdfs:label "city"@en ;
+      rdfs:seeAlso "https://www.wikidata.org/wiki/Q515"@en .
+
+
+###  http://purl.org/ontology/scc#collegiate
+:collegiate rdf:type owl:Class ;
+            rdfs:subClassOf :religious_administrative_unit ;
+            rdfs:comment "Church where the daily office of worship is maintained by a college of canons"@en ;
+            rdfs:label "collegiate"@en .
+
+
+###  http://purl.org/ontology/scc#confirmation
+:confirmation rdf:type owl:Class ;
+              rdfs:subClassOf :status_change ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :has_confirmation_participant ;
+                                owl:someValuesFrom :Diocese
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :has_date ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:dateTime
+                              ] ;
+              rdfs:comment "diocese whose foundation (usually by royal authority) is confirmed by the pope"@en ;
+              rdfs:label "confirmation"@en .
+
+
+###  http://purl.org/ontology/scc#decay
+:decay rdf:type owl:Class ;
+       rdfs:subClassOf <http://erlangen-crm.org/120111/E68_Dissolution> ,
+                       :status_change ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :has_decay_participant ;
+                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                              owl:unionOf ( :Diocese
+                                                            :abbey
+                                                            :archdiocese
+                                                            :archeparchy
+                                                            :archpriesthood
+                                                            :metropolis
+                                                            :patriarchate
+                                                          )
+                                            ]
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :has_date ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:dateTime
+                       ] ;
+       rdfs:comment "diocese or metropolis that continues to exist but is not active or is in an occupied territory"@en ;
+       rdfs:label "decay"@en .
+
+
+###  http://purl.org/ontology/scc#ecclesiastical_province
+:ecclesiastical_province rdf:type owl:Class ;
+                         rdfs:subClassOf :Religious_Administrative_Area ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :is_composed_of ;
+                                           owl:someValuesFrom :Diocese
+                                         ] ;
+                         rdfs:label "ecclesiastical province"@en ;
+                         rdfs:seeAlso "https://www.wikidata.org/wiki/Q625160"@en .
+
+
+###  http://purl.org/ontology/scc#elevating
+:elevating rdf:type owl:Class ;
+           rdfs:subClassOf :status_change ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :elevating_resulting_unit ;
+                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :archdiocese
+                                                                :metropolis
+                                                              )
+                                                ]
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :has_elevating_participant ;
+                             owl:someValuesFrom :Diocese
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :has_date ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange owl:rational
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :has_date ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ;
+           rdfs:comment "A diocese raises to a higher position (ex: metropolit)"@en ;
+           rdfs:label "elevating"@en .
+
+
+###  http://purl.org/ontology/scc#eparchy
+:eparchy rdf:type owl:Class ;
+         rdfs:subClassOf :religious_administrative_unit ;
+         rdfs:comment "administrative territorial entity of Greek-Catholic, Orthodox and Eastern Churches"@en ;
+         rdfs:label "eparchy"@en ;
+         rdfs:seeAlso "https://www.wikidata.org/wiki/Q285181"@en .
+
+
+###  http://purl.org/ontology/scc#erection
+:erection rdf:type owl:Class ;
+          rdfs:subClassOf <http://erlangen-crm.org/120111/E66_Formation> ,
+                          :status_change ,
+                          [ rdf:type owl:Class ;
+                            owl:unionOf ( :secular_administrative_unit
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :erection_resulting_unit ;
+                                            owl:someValuesFrom :religious_administrative_unit
+                                          ]
+                                        )
+                          ] ;
+          rdfs:comment "new erection of a diocese. We do not indicate the place of erection if it coincides with the name of the diocese (i.e. practically always!)"@en ;
+          rdfs:label "erection"@en .
+
+
+###  http://purl.org/ontology/scc#governing_change
+:governing_change rdf:type owl:Class ;
+                  rdfs:subClassOf :Change ;
+                  owl:disjointWith :status_change ,
+                                   :territorial_change ;
+                  rdfs:comment "governing change concept describes change(s) that modify the governance with in an institutions."@en ;
+                  rdfs:label "governing change"@en .
+
+
+###  http://purl.org/ontology/scc#incorporation
+:incorporation rdf:type owl:Class ;
+               rdfs:subClassOf :territorial_change ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :has_incorporation_participant ;
+                                 owl:someValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( :archdiocese
+                                                                    :metropolis
+                                                                    :patriarchate
+                                                                  )
+                                                    ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :is_incorporation_of ;
+                                 owl:allValuesFrom :Diocese
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :has_date ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:dateTime
+                               ] ;
+               rdfs:comment "metropolis incorporating a new suffragan diocese"@en ;
+               rdfs:label "incorporation"@en .
+
+
+###  http://purl.org/ontology/scc#incorporation_and_loss
+:incorporation_and_loss rdf:type owl:Class ;
+                        rdfs:subClassOf :territorial_change ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :has_incorporation_participant ;
+                                          owl:someValuesFrom :metropolis
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :has_loss_participant ;
+                                          owl:someValuesFrom :metropolis
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :is_incorporation_of ;
+                                          owl:someValuesFrom :Diocese
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :is_loss_of ;
+                                          owl:someValuesFrom :Diocese
+                                        ] ;
+                        rdfs:comment "metropolis that incorporates a new suffragan diocese and at the same time loses one or more suffragan dioceses metropolis that incorporates a new suffragan diocese and at the same time loses one or more suffragan dioceses"@en ;
+                        rdfs:label "incorporation and loss"@en .
+
+
+###  http://purl.org/ontology/scc#latitude
+:latitude rdf:type owl:Class ;
+          rdfs:subClassOf <http://erlangen-crm.org/140617/E47_Spatial_Coordinates> ;
+          rdfs:label "latitude"@en .
+
+
+###  http://purl.org/ontology/scc#longitude
+:longitude rdf:type owl:Class ;
+           rdfs:subClassOf <http://erlangen-crm.org/140617/E47_Spatial_Coordinates> ;
+           rdfs:label "longitude"@en .
+
+
+###  http://purl.org/ontology/scc#loss
+:loss rdf:type owl:Class ;
+      rdfs:subClassOf :territorial_change ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :has_loss_participant ;
+                        owl:someValuesFrom :metropolis
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :is_loss_of ;
+                        owl:someValuesFrom :Diocese
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :has_date ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:dateTime
+                      ] ;
+      rdfs:comment "metropolis losing one or more suffragan dioceses"@en ;
+      rdfs:label "loss"@en .
+
+
+###  http://purl.org/ontology/scc#metropolis
+:metropolis rdf:type owl:Class ;
+            rdfs:subClassOf :religious_administrative_unit ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :headof ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :ecclesiastical_province
+                            ] ;
+            rdfs:comment "diocese headed by an archbishop and having suffragan dioceses under its jurisdiction"@en ;
+            rdfs:label "metropolis"@en ;
+            rdfs:seeAlso "https://www.wikidata.org/wiki/Q427961"@en .
+
+
+###  http://purl.org/ontology/scc#modification
+:modification rdf:type owl:Class ;
+              rdfs:subClassOf :governing_change ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :has_modification_participant ;
+                                owl:someValuesFrom [ rdf:type owl:Class ;
+                                                     owl:unionOf ( :archdiocese
+                                                                   :metropolis
+                                                                   :patriarchate
+                                                                 )
+                                                   ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :is_modifying_of ;
+                                owl:someValuesFrom :Diocese
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :has_date ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:dateTime
+                              ] ;
+              rdfs:comment "change to the structure of the diocese"@en ;
+              rdfs:label "modification"@en .
+
+
+###  http://purl.org/ontology/scc#name
+:name rdf:type owl:Class ;
+      rdfs:subClassOf <http://erlangen-crm.org/120111/E82_Actor_Appellation> .
+
+
+###  http://purl.org/ontology/scc#organization
+:organization rdf:type owl:Class ;
+              owl:equivalentClass <http://xmlns.com/foaf/0.1/Organization> ;
+              rdfs:subClassOf <http://erlangen-crm.org/091216/E71.Man-Made_Thing> ,
+                              <http://erlangen-crm.org/140617/E40_Legal_Body> ;
+              rdfs:label "organization"@en .
+
+
+###  http://purl.org/ontology/scc#parish
+:parish rdf:type owl:Class ;
+        rdfs:subClassOf :religious_administrative_unit ;
+        rdfs:label "parish (plebania)"@en .
+
+
+###  http://purl.org/ontology/scc#patriarchate
+:patriarchate rdf:type owl:Class ;
+              rdfs:subClassOf :religious_administrative_unit ;
+              rdfs:comment "office or jurisdiction of a patriarch"@en ;
+              rdfs:label "patriarchate"@en ;
+              rdfs:seeAlso "https://www.wikidata.org/wiki/Q1282276"@en .
+
+
+###  http://purl.org/ontology/scc#perpetual_administration
+:perpetual_administration rdf:type owl:Class ;
+                          rdfs:subClassOf <http://erlangen-crm.org/140617/E8_Acquisition> ,
+                                          :governing_change ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :has_administration_perpetual_participant ;
+                                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :Diocese
+                                                                               :metropolis
+                                                                             )
+                                                               ]
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :is_administration_perpetual_of ;
+                                            owl:someValuesFrom :Diocese
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :has_date ;
+                                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange xsd:dateTime
+                                          ] ;
+                          rdfs:comment "diocese that administers another diocese or is administered by the bishop of another diocese sine die diocese that administers another diocese or is administered by the bishop of another diocese sine die"@en ;
+                          rdfs:label "perpetual administration"@en .
+
+
+###  http://purl.org/ontology/scc#populated_place
+:populated_place rdf:type owl:Class ;
+                 rdfs:subClassOf <http://erlangen-crm.org/140617/E53_Place> ;
+                 rdfs:label "populated place"@en .
+
+
+###  http://purl.org/ontology/scc#prelature
+:prelature rdf:type owl:Class ;
+           rdfs:subClassOf :religious_administrative_unit ;
+           rdfs:label "prelature"@en ;
+           rdfs:seeAlso "https://www.wikidata.org/wiki/Q2633744"@en .
+
+
+###  http://purl.org/ontology/scc#reestablishment
+:reestablishment rdf:type owl:Class ;
+                 rdfs:subClassOf <http://erlangen-crm.org/120111/E66_Formation> ,
+                                 :status_change ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :has_reestablishment_participant ;
+                                   owl:someValuesFrom [ rdf:type owl:Class ;
+                                                        owl:unionOf ( :Diocese
+                                                                      :abbey
+                                                                      :archdiocese
+                                                                      :metropolis
+                                                                    )
+                                                      ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :has_date ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:dateTime
+                                 ] ;
+                 rdfs:comment "diocese or metropolis that is re-established after a period of inactivity"@en ;
+                 rdfs:label "reestablishment"@en .
+
+
+###  http://purl.org/ontology/scc#reestablishment_as_a_titular_see
+:reestablishment_as_a_titular_see rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://erlangen-crm.org/120111/E66_Formation> ,
+                                                  :status_change ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :has_reestablishment_titular_participant ;
+                                                    owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( :Diocese
+                                                                                       :archdiocese
+                                                                                       :patriarchate
+                                                                                     )
+                                                                       ]
+                                                  ] ;
+                                  rdfs:comment "diocese already suppressed and re-established only as a titular diocese"@en ;
+                                  rdfs:label "reestablishment as a titular see"@en .
+
+
+###  http://purl.org/ontology/scc#religious_administrative_unit
+:religious_administrative_unit rdf:type owl:Class ;
+                               rdfs:subClassOf :administrative_unit ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :Has_Administration_type ;
+                                                 owl:someValuesFrom :Administration_type
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :alternative_name ;
+                                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                 owl:onDataRange xsd:string
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :official_name ;
+                                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                 owl:onDataRange xsd:string
+                                               ] ;
+                               rdfs:comment "entity with control over a religion or part of a religion."@en ;
+                               rdfs:label "religious administrative unit"@en ;
+                               rdfs:seeAlso "https://www.wikidata.org/wiki/Q51041800"@en .
+
+
+###  http://purl.org/ontology/scc#renomination
+:renomination rdf:type owl:Class ;
+              rdfs:subClassOf :governing_change ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :has_renomination_participant ;
+                                owl:someValuesFrom [ rdf:type owl:Class ;
+                                                     owl:unionOf ( :Diocese
+                                                                   :archdiocese
+                                                                   :metropolis
+                                                                 )
+                                                   ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :changed_name ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :has_date ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:dateTime
+                              ] ;
+              rdfs:comment "diocese or metropolis changing name"@en ;
+              rdfs:label "renomination"@en .
+
+
+###  http://purl.org/ontology/scc#secular_administrative_unit
+:secular_administrative_unit rdf:type owl:Class ;
+                             rdfs:subClassOf :administrative_unit ;
+                             rdfs:label "secular administrative unit"@en .
+
+
+###  http://purl.org/ontology/scc#separation
+:separation rdf:type owl:Class ;
+            rdfs:subClassOf :governing_change ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_separation_participant ;
+                              owl:someValuesFrom :Diocese
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :is_separation_of ;
+                              owl:someValuesFrom :Diocese
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_date ;
+                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:dateTime
+                            ] ;
+            rdfs:comment "diocese restored as autonomous diocese after aequae principaliter union"@en ;
+            rdfs:label "separation"@en .
+
+
+###  http://purl.org/ontology/scc#source
+:source rdf:type owl:Class ;
+        rdfs:subClassOf <http://erlangen-crm.org/140617/E31_Document> ;
+        rdfs:label "Quelle"@de ,
+                   "Source"@en .
+
+
+###  http://purl.org/ontology/scc#standard_name
+:standard_name rdf:type owl:Class ;
+               rdfs:subClassOf :name ;
+               rdfs:label "standard name"@en .
+
+
+###  http://purl.org/ontology/scc#status_change
+:status_change rdf:type owl:Class ;
+               rdfs:subClassOf :Change ;
+               rdfs:comment "Status_change describes change(s) that modify the administrative status."@en ;
+               rdfs:label "status change"@en .
+
+
+###  http://purl.org/ontology/scc#suppression
+:suppression rdf:type owl:Class ;
+             rdfs:subClassOf <http://erlangen-crm.org/120111/E68_Dissolution> ,
+                             :status_change ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :has_suppression_participant ;
+                               owl:someValuesFrom [ rdf:type owl:Class ;
+                                                    owl:unionOf ( :Diocese
+                                                                  :abbey
+                                                                  :archdiocese
+                                                                  :archeparchy
+                                                                  :archpriesthood
+                                                                  :collegiate
+                                                                  :eparchy
+                                                                  :metropolis
+                                                                  :parish
+                                                                  :patriarchate
+                                                                  :prelature
+                                                                  :vicariate
+                                                                )
+                                                  ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :has_date ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:dateTime
+                             ] ;
+             rdfs:comment "suppressed institution"@en ;
+             rdfs:label "suppression"@en .
+
+
+###  http://purl.org/ontology/scc#territorial_change
+:territorial_change rdf:type owl:Class ;
+                    rdfs:subClassOf :Change ;
+                    rdfs:label "territorial change"@en ;
+                    owl:incompatibleWith "Territorial_change describes modification of the Territory of Dicocesan."@en .
+
+
+###  http://purl.org/ontology/scc#titular
+:titular rdf:type owl:Class ;
+         rdfs:subClassOf <http://erlangen-crm.org/120111/E68_Dissolution> ,
+                         :status_change ;
+         rdfs:comment "titular diocese or metropolis"@en ;
+         rdfs:label "titular"@en .
+
+
+###  http://purl.org/ontology/scc#transfer
+:transfer rdf:type owl:Class ;
+          rdfs:subClassOf :governing_change ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :has_transfer_participant ;
+                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :Diocese
+                                                               :archdiocese
+                                                               :metropolis
+                                                               :patriarchate
+                                                             )
+                                               ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :transfer_seat ;
+                            owl:allValuesFrom :city
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :has_date ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:dateTime
+                          ] ;
+          rdfs:comment "diocese whose diocesan seat is transferred to another city"@en ;
+          rdfs:label "(seat) transfer"@en .
+
+
+###  http://purl.org/ontology/scc#union
+:union rdf:type owl:Class ;
+       rdfs:subClassOf :governing_change ,
+                       [ rdf:type owl:Class ;
+                         owl:unionOf ( :Diocese
+                                       :abbey
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :has_union_participant ;
+                                         owl:someValuesFrom :archpriesthood
+                                       ]
+                                     )
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :is_union_of ;
+                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                              owl:unionOf ( :Diocese
+                                                            :prelature
+                                                          )
+                                            ]
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :has_date ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:dateTime
+                       ] ;
+       rdfs:comment "united diocese but it is not known what kind of union it is"@en ;
+       rdfs:label "union"@en .
+
+
+###  http://purl.org/ontology/scc#union_In_persona_episcopi
+:union_In_persona_episcopi rdf:type owl:Class ;
+                           rdfs:subClassOf :governing_change ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :has_unione_in_persona_episcopi_participant ;
+                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( :Diocese
+                                                                                :archdiocese
+                                                                                :archpriesthood
+                                                                                :metropolis
+                                                                                :prelature
+                                                                              )
+                                                                ]
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :is_unione_in_persona_episcopi_of ;
+                                             owl:someValuesFrom :Diocese
+                                           ] ;
+                           rdfs:comment "diocese united by virtue of having the same bishop"@en ;
+                           rdfs:label "union In persona episcopi"@en ;
+                           rdfs:seeAlso "https://www.wikidata.org/wiki/Q1409110" .
+
+
+###  http://purl.org/ontology/scc#union_aeque_principaliter
+:union_aeque_principaliter rdf:type owl:Class ;
+                           rdfs:subClassOf :governing_change ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :has_unione_aeque_principaliter_participant ;
+                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( :Diocese
+                                                                                :archdiocese
+                                                                                :metropolis
+                                                                                :prelature
+                                                                              )
+                                                                ]
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :is_unione_in_persona_episcopi_of ;
+                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( :Diocese
+                                                                                :archpriesthood
+                                                                                :metropolis
+                                                                              )
+                                                                ]
+                                           ] ;
+                           rdfs:comment "diocese united aequae principaliter to another diocese"@en ;
+                           rdfs:label "union aeque principaliter"@en .
+
+
+###  http://purl.org/ontology/scc#union_plena
+:union_plena rdf:type owl:Class ;
+             rdfs:subClassOf :governing_change ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :has_unione_plena_participant ;
+                               owl:someValuesFrom [ rdf:type owl:Class ;
+                                                    owl:unionOf ( :Diocese
+                                                                  :abbey
+                                                                  :archdiocese
+                                                                  :archpriesthood
+                                                                  :metropolis
+                                                                  :prelature
+                                                                )
+                                                  ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :is_unione_plena_of ;
+                               owl:someValuesFrom [ rdf:type owl:Class ;
+                                                    owl:unionOf ( :Diocese
+                                                                  :archpriesthood
+                                                                )
+                                                  ]
+                             ] ;
+             rdfs:comment "diocese fully united with another diocese"@en ;
+             rdfs:label "union plena"@en .
+
+
+###  http://purl.org/ontology/scc#vicariate
+:vicariate rdf:type owl:Class ;
+           rdfs:subClassOf :religious_administrative_unit ;
+           rdfs:label "vicariate"@en ;
+           rdfs:seeAlso "https://www.wikidata.org/wiki/Q12778511"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class .
+
+
+###  https://www.wikidata.org/entity/Q665487
+<https://www.wikidata.org/entity/Q665487> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/ontology/scc#Aberdeen
+:Aberdeen rdf:type owl:NamedIndividual ,
+                   :city ;
+          rdfs:seeAlso "https://www.wikidata.org/wiki/Q36405" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Aberdeen"@lat .
+
+
+###  http://purl.org/ontology/scc#Aberdonensis
+:Aberdonensis rdf:type owl:NamedIndividual ,
+                       :Diocese ;
+              owl:sameAs :Merciorum ;
+              :is_part_of :Sancti_Andreae ;
+              :precedingUnit :Merciorum ;
+              :alternative_name "Mortlach" ;
+              rdfs:seeAlso "https://www.wikidata.org/wiki/Q866761"@en ,
+                           "https://www.catholic-hierarchy.org/diocese/daber.html"^^xsd:anyURI ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Aberdonensis"@lat .
+
+
+###  http://purl.org/ontology/scc#Merciorum
+
+###  http://purl.org/ontology/scc#Albensis
+:Albensis rdf:type owl:NamedIndividual ,
+                   :Diocese ;
+          :alternative_name "Albano" ;
+          rdfs:seeAlso "https://www.catholic-hierarchy.org/diocese/dalby.html" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Albensis"@lat ;
+          <http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs> "https://www.wikidata.org/wiki/Q866790" .
+
+
+###  http://purl.org/ontology/scc#Ecclesiastical_province_of_Mainz
+:Ecclesiastical_province_of_Mainz rdf:type owl:NamedIndividual ,
+                                           :ecclesiastical_province ;
+                                  rdfs:label "Ecclesiastical province of Mainz"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Ecclesiastical province of Mainz"@en ,
+                                                                                  "Kirchenprovinz Mainz"@de ;
+                                  <http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs> "https://viaf.org/viaf/241852096/"^^xsd:anyURI ,
+                                                                                                     "https://www.wikidata.org/wiki/Q1743208"^^xsd:anyURI .
+
+
+###  http://purl.org/ontology/scc#Merciorum
+:Merciorum rdf:type owl:NamedIndividual ,
+                    :Diocese ;
+           :Has_Administration_type :immediate_subiecte ;
+           :succeedingUnit :Aberdonensis ;
+           :changed_name "Aberdonensis" ;
+           rdfs:label "Merciorum" ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Merciorum"@lat .
+
+
+###  http://purl.org/ontology/scc#Moguntina
+:Moguntina rdf:type owl:NamedIndividual ,
+                    :Diocese ;
+           owl:sameAs <http://purl.org/ontology/scc#Moguntina_(metr.)> ;
+           :succeedingUnit <http://purl.org/ontology/scc#Moguntina_(metr.)> ;
+           :alternative_name "Maguntina" ,
+                             "Mainz" ;
+           rdfs:label "Moguntina"@lat ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Moguntina"@lat ;
+           <http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs> "http://dbpedia.org/resource/Roman_Catholic_Diocese_of_Mainz"^^xsd:anyURI .
+
+
+###  http://purl.org/ontology/scc#Moguntina_(metr.)
+
+###  http://purl.org/ontology/scc#Ostiensis
+:Ostiensis rdf:type owl:NamedIndividual ,
+                    :Diocese ;
+           :alternative_name "Ostia" ;
+           rdfs:label "Ostiensis" ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Ostiensis"@lat ;
+           <http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs> "http://dbpedia.org/resource/Roman_Catholic_Suburbicarian_Diocese_of_Ostia"^^xsd:anyURI ,
+                                                                              "https://www.wikidata.org/wiki/Q2623978" .
+
+
+###  http://purl.org/ontology/scc#Portuensis
+:Portuensis rdf:type owl:NamedIndividual ,
+                     :Diocese ;
+            :alternative_name "Porto"@lat ;
+            rdfs:seeAlso "https://www.catholic-hierarchy.org/diocese/dpsri.html" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Portuensis"@lat ;
+            <http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs> "https://www.wikidata.org/wiki/Q874498" .
+
+
+###  http://purl.org/ontology/scc#Provincia_Ecclesiastica_Romana
+:Provincia_Ecclesiastica_Romana rdf:type owl:NamedIndividual ,
+                                         :ecclesiastical_province ;
+                                :is_composed_of :Albensis ,
+                                                :Ostiensis ,
+                                                :Portuensis ,
+                                                :Romana ,
+                                                :Tusculana ;
+                                rdfs:label "Ecclesiastical province of Rom"@en ,
+                                           "Provincia Ecclesiastica Romana"@lat ;
+                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Ecclesiastical province of Rom"@en .
+
+
+###  http://purl.org/ontology/scc#Romana
+:Romana rdf:type owl:NamedIndividual ,
+                 :Diocese ;
+        :alternative_name "Roma" ,
+                          "Urbis" ;
+        rdfs:label "Romana" ;
+        <http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs> "http://dbpedia.org/resource/Diocese_of_Rome"^^xsd:anyURI ,
+                                                                           "https://www.wikidata.org/wiki/Q665037" .
+
+
+###  http://purl.org/ontology/scc#Sancti_Andreae
+:Sancti_Andreae rdf:type owl:NamedIndividual ,
+                         :ecclesiastical_province ;
+                rdfs:label "Sancti Andreae" .
+
+
+###  http://purl.org/ontology/scc#Tusculana
+:Tusculana rdf:type owl:NamedIndividual ,
+                    :Diocese ;
+           :Has_Administration_type :suffragan ;
+           :alternative_name "Frascati" ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Tusculana"@lat ;
+           <http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs> "https://www.wikidata.org/wiki/Q868959" .
+
+
+###  http://purl.org/ontology/scc#Veliternensis
+:Veliternensis rdf:type owl:NamedIndividual ,
+                        :Diocese ;
+               rdfs:label "Veliternensis" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Veliternensis"@lat .
+
+
+###  http://purl.org/ontology/scc#decaying_of_Aberdonensis
+:decaying_of_Aberdonensis rdf:type owl:NamedIndividual ,
+                                   :decay ;
+                          :has_decay_participant :Aberdonensis ;
+                          :has_date "1577"^^xsd:dateTime ;
+                          rdfs:label "decaying of Aberdonensis" .
+
+
+###  http://purl.org/ontology/scc#elevating_of_Moguntina
+:elevating_of_Moguntina rdf:type owl:NamedIndividual ,
+                                 :elevating ;
+                        :elevating_resulting_unit <http://purl.org/ontology/scc#Moguntina_(metr.)> ;
+                        :has_elevating_participant :Moguntina ;
+                        :precedingEvent :foundation_of_Moguntina ;
+                        <http://erlangen-crm.org/current/P82_at_some_time_within> "747"^^xsd:dateTime ;
+                        rdfs:label "elevating of Moguntina"@en .
+
+
+###  http://purl.org/ontology/scc#fondation_of_Merciorum
+:fondation_of_Merciorum rdf:type owl:NamedIndividual ,
+                                 :erection ;
+                        :erection_resulting_unit :Merciorum ;
+                        <http://erlangen-crm.org/current/P82_at_some_time_within> "11th century" ;
+                        :bibliographic_reference "REA (I), p. XI"^^rdfs:Literal ;
+                        rdfs:label "fondation of Merciorum" .
+
+
+###  http://purl.org/ontology/scc#fondation_of_Ostiensis
+:fondation_of_Ostiensis rdf:type owl:NamedIndividual ,
+                                 :erection ;
+                        :erection_resulting_unit :Ostiensis ;
+                        rdfs:label "fondation of Ostiensis"@en .
+
+
+###  http://purl.org/ontology/scc#fondation_of_Romana
+:fondation_of_Romana rdf:type owl:NamedIndividual ,
+                              :erection ;
+                     :erection_resulting_unit :Romana ;
+                     <http://erlangen-crm.org/current/P82_at_some_time_within> "I sec." ;
+                     rdfs:label "fondation of Romana"@en .
+
+
+###  http://purl.org/ontology/scc#foundation_of_Moguntina
+:foundation_of_Moguntina rdf:type owl:NamedIndividual ,
+                                  :erection ;
+                         :erection_resulting_unit :Moguntina ;
+                         :followingEvent :elevating_of_Moguntina ;
+                         <http://erlangen-crm.org/current/P82_at_some_time_within> "4th Century" ;
+                         rdfs:label "foundation of Moguntina"@en .
+
+
+###  http://purl.org/ontology/scc#immediate_subiecte
+:immediate_subiecte rdf:type owl:NamedIndividual ,
+                             :Religious_Administration_Type ;
+                    rdfs:label "immediate subiecte" .
+
+
+###  http://purl.org/ontology/scc#reestablishment_of_Aberdonensis
+:reestablishment_of_Aberdonensis rdf:type owl:NamedIndividual ,
+                                          :reestablishment ;
+                                 :has_reestablishment_participant :Aberdonensis ;
+                                 :bibliographic_reference "ASS (XI), p. 6"^^rdfs:Literal ;
+                                 :has_date "04.03.1878"^^xsd:dateTime ;
+                                 :has_note_from_source "Ex supremo Apostolatus (Leone XIII)"^^rdfs:Literal ;
+                                 rdfs:label "reestablishment of Aberdonensis" .
+
+
+###  http://purl.org/ontology/scc#renomination_of_Merciorum
+:renomination_of_Merciorum rdf:type owl:NamedIndividual ,
+                                    :renomination ;
+                           :has_renomination_participant :Merciorum ;
+                           :bibliographic_reference "REA (I), p. XVIII"^^rdfs:Literal ;
+                           :changed_name "Aberdonensis" ;
+                           :has_date "1125"^^xsd:dateTime ;
+                           rdfs:label "renomination of Merciorum" .
+
+
+###  http://purl.org/ontology/scc#suffragan
+:suffragan rdf:type owl:NamedIndividual ,
+                    :Religious_Administration_Type ;
+           rdfs:label "suffragan" .
+
+
+###  http://purl.org/ontology/scc#transfer_of_Merciorum
+:transfer_of_Merciorum rdf:type owl:NamedIndividual ,
+                                :transfer ;
+                       :has_transfer_participant :Merciorum ;
+                       :transfer_seat :Aberdeen ;
+                       :bibliographic_reference "REA (I), p. XVIII"^^rdfs:Literal ;
+                       :has_date "1125"^^xsd:dateTime ;
+                       rdfs:label "transfer of Merciorum" .
+
+
+###  http://purl.org/ontology/scc#Moguntina_(metr.)
+<http://purl.org/ontology/scc#Moguntina_(metr.)> rdf:type owl:NamedIndividual ,
+                                                          :metropolis ;
+                                                 :headof :Ecclesiastical_province_of_Mainz ;
+                                                 :precedingUnit :Moguntina ;
+                                                 rdfs:label "Moguntina (metr.)"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/elements/1.1/title> <http://purl.org/dc/elements/1.1/title> "" .
+
+
+<http://purl.org/dc/terms/creator> <http://purl.org/dc/terms/creator> "" .
+
+
+:alternative_name rdfs:label "alternative name"@en .
+
+
+:changed_name rdfs:label "changed name"@en .
+
+
+:name rdfs:label "name"@en .
+
+
+:official_name rdfs:label "official name"@en .
+
+
+:precedingUnit rdfs:label "Preceding Unit"@en .
+
+
+:succeedingUnit rdfs:label "Succeeding Unit"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
