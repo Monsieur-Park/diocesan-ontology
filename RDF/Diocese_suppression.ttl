@@ -1,0 +1,1153 @@
+@prefix scc:   <http://purl.org/ontology/scc#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Carinolensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Carinolensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Carinolensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Catalaunensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Catalaunensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Cursolensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "30.06.1828" ;
+        skos:prefLabel        "Cursolensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Avelonensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "fine XIV sec." ;
+        skos:prefLabel        "Avelonensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Chiemensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "01.04.1818" , "05.06.1817" ;
+        skos:prefLabel        "Chiemensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Cenomanensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Cenomanensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Bisarchiensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Bisarchiensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Bisarchiensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aquensis_in_provincia_Auxitana>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aquensis_in_provincia_Auxitana" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aquensis_in_provincia_Auxitana> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Antissiodorensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "04.09.1821" , "29.11.1801" ;
+        skos:prefLabel        "Antissiodorensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Carinolensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.06.1818" ;
+        skos:prefLabel        "Carinolensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Cunaviensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "XV sec." ;
+        skos:prefLabel        "Cunaviensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aquisgranensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "16.07.1821" ;
+        skos:prefLabel        "Aquisgranensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Audomarensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Audomarensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aliphana>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.06.1818" ;
+        skos:prefLabel        "Aliphana" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Coccinensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "24.04.1838" ;
+        skos:prefLabel        "Coccinensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Cunaviensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Cunaviensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Cunaviensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Cabillonensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Cabillonensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Cabillonensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Carcassonensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Carcassonensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Carcassonensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Corisopitensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Corisopitensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Corisopitensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Adiacensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Adiacensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Adiacensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aniciensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aniciensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aniciensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Alexandrina>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "23.01.1805" , "04.06.1214" ;
+        skos:prefLabel        "Alexandrina" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Albarracinensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Albarracinensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Albarracinensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Castrensis_in_Tuscia>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Castrensis_in_Tuscia" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Castrensis_in_Tuscia> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Bellicastrensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Bellicastrensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Bellicastrensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aleriensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aleriensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aleriensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Adurensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Adurensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Baiocensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Baiocensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Amoniensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Amoniensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Amoniensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Bictoniensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "VI sec." ;
+        skos:prefLabel        "Bictoniensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Castrensis_in_Apulia>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Castrensis_in_Apulia" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Castrensis_in_Apulia> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Amanteae>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Amanteae" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Amanteae> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Alexandrina>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Alexandrina" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Alexandrina> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Arbanensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Arbanensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Arbanensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Convenarum>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Convenarum" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Brugensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Brugensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Baionensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Baionensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Baionensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Bitectensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.06.1818" ;
+        skos:prefLabel        "Bitectensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Blesensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Blesensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Blesensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Appamiarum>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Appamiarum" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Appamiarum> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Biterrensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Biterrensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Abrincensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Abrincensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Boloniensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Boloniensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aemoniensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "30.06.1828" ;
+        skos:prefLabel        "Aemoniensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Appamiarum>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Appamiarum" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Rodensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "1149" ;
+        skos:prefLabel        "Rodensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aquaependentis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aquaependentis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aquaependentis> .
+
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aptensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aptensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aptensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Abrincensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Abrincensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Abrincensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Auximana>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Auximana" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Auximana> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Brugensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Brugensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Brugensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aquavivensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "VI sec." ;
+        skos:prefLabel        "Aquavivensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Alexanensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.06.1818" ;
+        skos:prefLabel        "Alexanensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Bisarchiensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "08.12.1503" ;
+        skos:prefLabel        "Bisarchiensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Absorensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Absorensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Absorensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Balneoregiensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Balneoregiensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Balneoregiensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Agennensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Agennensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Agennensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Croensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Croensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Croensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Castrensis_in_Apulia>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.06.1818" ;
+        skos:prefLabel        "Castrensis_in_Apulia" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Condomiensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Condomiensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Condomiensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Cingulana>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "metà VI sec." ;
+        skos:prefLabel        "Cingulana" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Arbensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "20.06.1828" ;
+        skos:prefLabel        "Arbensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Civitatensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Civitatensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Civitatensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Cluanensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Cluanensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Cluanensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Bellicastrensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.06.1818" ;
+        skos:prefLabel        "Bellicastrensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Cabillonensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Cabillonensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Cluanensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "metà XVIII sec." ;
+        skos:prefLabel        "Cluanensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Argentinensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Argentinensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Argentinensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Carnotensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Carnotensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Catalaunensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Catalaunensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Catalaunensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Caturcensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Caturcensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Casalensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "01.06.1803" ;
+        skos:prefLabel        "Casalensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Bobiensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "1803" ;
+        skos:prefLabel        "Bobiensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Augustana_Pretoriae>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Augustana_Pretoriae" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Augustana_Pretoriae> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Cingulana>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Cingulana" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Cingulana> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Ambianensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Ambianensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Ambianensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Cenanensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Cenanensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Cenanensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Capriensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Capriensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Capriensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Cannensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "1455" ;
+        skos:prefLabel        "Cannensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Amanteae>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "1094" ;
+        skos:prefLabel        "Amanteae" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Castrensis_provinciae_Albiensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Castrensis_provinciae_Albiensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aliphana>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aliphana" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aliphana> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Claramontana>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Claramontana" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Capriensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.06.1818" ;
+        skos:prefLabel        "Capriensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Carpentoractensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Carpentoractensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Carpentoractensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Andegavensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Andegavensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Briocensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Briocensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Briocensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aurelianensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aurelianensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aurelianensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aquisgranensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aquisgranensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aquisgranensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Bellicensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Bellicensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Bellicensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Chelmensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Chelmensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Chelmensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aptensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Aptensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Auximana>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "22.05.1240" ;
+        skos:prefLabel        "Auximana" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Chelmensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "22.09.1805" ;
+        skos:prefLabel        "Chelmensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Caprulana>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "01.05.1818" ;
+        skos:prefLabel        "Caprulana" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aquensis_in_provincia_Auxitana>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Aquensis_in_provincia_Auxitana" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Alesiensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Alesiensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Croensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "XVI sec." ;
+        skos:prefLabel        "Croensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Augustana_Pretoriae>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "01.06.1803" ;
+        skos:prefLabel        "Augustana_Pretoriae" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Marianensis_et_Accensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Marianensis_et_Accensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Argentinensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Argentinensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Chiemensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Chiemensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Chiemensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Agathensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Agathensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Audomarensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Audomarensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Audomarensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Antissiodorensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Antissiodorensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Antissiodorensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Cursolensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Cursolensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Cursolensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Avelonensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Avelonensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Avelonensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Brictinoriensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "1803" ;
+        skos:prefLabel        "Brictinoriensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Atrebatensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Atrebatensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Atrebatensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Arbensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Arbensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Arbensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Bictoniensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Bictoniensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Bictoniensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Castrensis_provinciae_Albiensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Castrensis_provinciae_Albiensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Castrensis_provinciae_Albiensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aurelianensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Aurelianensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Basileensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Basileensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Auxerensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "20.06.1828" ;
+        skos:prefLabel        "Auxerensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Castrensis_in_Sardinia>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "08.12.1503" ;
+        skos:prefLabel        "Castrensis_in_Sardinia" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Baiocensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Baiocensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Baiocensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Civitatis_Ducalis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Civitatis_Ducalis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Civitatis_Ducalis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Atrebatensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Atrebatensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Coccinensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Coccinensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Coccinensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Basileensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Basileensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Basileensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Civitatis_Ducalis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.06.1818" ;
+        skos:prefLabel        "Civitatis_Ducalis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Civitatis_Novae>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Civitatis_Novae" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Civitatis_Novae> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Convenarum>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Convenarum" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Convenarum> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Bethleemitana>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Bethleemitana" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Bethleemitana> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aquavivensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aquavivensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aquavivensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aurasicensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aurasicensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aurasicensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Constantiensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "16.08.1821" ;
+        skos:prefLabel        "Constantiensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Antwerpensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Antwerpensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Antwerpensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Adurensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Adurensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Adurensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Albensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Albensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Albensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Amiternensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Amiternensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Amiternensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Bitectensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Bitectensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Bitectensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Camenecensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Camenecensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Camenecensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Biterrensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Biterrensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Biterrensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Boloniensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Boloniensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Boloniensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Caiacensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Caiacensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Caiacensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aemoniensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aemoniensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aemoniensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Blesensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Blesensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Acellensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Acellensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Acellensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Caiacensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.06.1818" ;
+        skos:prefLabel        "Caiacensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aurasicensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Aurasicensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aniciensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Aniciensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Adiacensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Adiacensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Antwerpensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Antwerpensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Conseranensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Conseranensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Conseranensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Castrensis_in_Tuscia>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "13.09.1649" ;
+        skos:prefLabel        "Castrensis_in_Tuscia" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Amoniensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "30.06.1828" ;
+        skos:prefLabel        "Amoniensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aleriensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Aleriensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Acellensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "969" ;
+        skos:prefLabel        "Acellensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Amiternensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "VII sec." ;
+        skos:prefLabel        "Amiternensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Alexanensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Alexanensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Alexanensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Albarracinensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "1851" ;
+        skos:prefLabel        "Albarracinensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Arbanensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "28.06.1828" ;
+        skos:prefLabel        "Arbanensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Camenecensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "03.06.1866" ;
+        skos:prefLabel        "Camenecensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Claramontana>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Claramontana" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Claramontana> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Baionensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Baionensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Casalensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Casalensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Casalensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Andegavensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Andegavensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Andegavensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Civitatis_Novae>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "28.01.1785" ;
+        skos:prefLabel        "Civitatis_Novae" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Balleacensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Balleacensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Balleacensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Carnotensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Carnotensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Carnotensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Camberinensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Camberinensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Camberinensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Bethleemitana>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Bethleemitana" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Caturcensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Caturcensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Caturcensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Bellovacensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Bellovacensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Bellovacensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Carcassonensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Carcassonensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Corbeiensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "16.07.1821" ;
+        skos:prefLabel        "Corbeiensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Cavallicensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Cavallicensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Cavallicensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Corisopitensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Corisopitensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Bobiensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Bobiensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Bobiensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Absorensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "30.06.1828" , "20.06.1828" ;
+        skos:prefLabel        "Absorensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Agennensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Agennensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Balleacensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "metà XV sec." ;
+        skos:prefLabel        "Balleacensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Corbeiensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Corbeiensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Corbeiensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Carpentoractensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Carpentoractensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Castellana>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Castellana" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Castellana> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Albensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "01.06.1803" , "985" ;
+        skos:prefLabel        "Albensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Cannensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Cannensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Cannensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Castellana>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "08.10.1451" ;
+        skos:prefLabel        "Castellana" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Balneoregiensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.03.1986" ;
+        skos:prefLabel        "Balneoregiensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Ambianensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Ambianensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Conseranensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Conseranensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Alesiensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Alesiensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Alesiensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Condomiensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Condomiensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Civitatensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "16.03.1851" ;
+        skos:prefLabel        "Civitatensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aquaependentis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.03.1986" ;
+        skos:prefLabel        "Aquaependentis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Cenanensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "1211" ;
+        skos:prefLabel        "Cenanensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Agathensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Agathensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Agathensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Brictinoriensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Brictinoriensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Brictinoriensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Aeduensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Aeduensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Bellicensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Bellicensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Caprulana>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Caprulana" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Caprulana> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Constantiensis_in_provincia_Rothomagensi>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Constantiensis_in_provincia_Rothomagensi" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Briocensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Briocensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Constantiensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Constantiensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Constantiensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Camberinensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Camberinensis" .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Bellovacensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Bellovacensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Castrensis_in_Sardinia>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Castrensis_in_Sardinia" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Castrensis_in_Sardinia> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Cavallicensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "29.11.1801" ;
+        skos:prefLabel        "Cavallicensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Aeduensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Aeduensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Aeduensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Cenomanensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Cenomanensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Cenomanensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Camplensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Camplensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Camplensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Auxerensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Auxerensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Auxerensis> .
+
+<http://purl.org/resource/scc/scc/religious_administrative_unit/Camplensis>
+        a                     scc:Diocese ;
+        crm:P86_falls_within  "27.06.1818" ;
+        skos:prefLabel        "Camplensis" .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Marianensis_et_Accensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Marianensis_et_Accensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Marianensis_et_Accensis> .
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Constantiensis_in_provincia_Rothomagensi>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Constantiensis_in_provincia_Rothomagensi" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Constantiensis_in_provincia_Rothomagensi> .
+
+
+<http://purl.org/resource/scc/suppression/Suppression_of_Rodensis>
+        a           scc:suppression ;
+        rdfs:label  "Suppression_of_Rodensis" ;
+        <http://purl.org/%20http://purl.org/ontology/scc%23has_suppression_participant>
+                <http://purl.org/resource/scc/scc/religious_administrative_unit/Rodensis> .
