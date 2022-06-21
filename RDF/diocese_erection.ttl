@@ -893,12 +893,6 @@
         rdfs:label                   "Erection_of_Capuana" ;
         scc:erection_resulting_unit  <http://purl.org/resource/scc/scc/religious_administrative_unit/Capuana> .
 
-<http://purl.org/scc/religious_administrative_unit/Civitatensis%20%5Bin%20Sardinia%5D>
-        a                     scc:Diocese ;
-        scc:Religious_Administration_Type
-                <http://purl.org/scc/religious_administrative_unit/religious_administration_type/imm.%20sogg.> ;
-        crm:P86_falls_within  "XII sec." ;
-        skos:prefLabel        "Civitatensis [in Sardinia]" .
 
 <http://purl.org/resource/scc/erection/Erection_of_Andegavensis>
         a                            scc:erection ;
@@ -1439,10 +1433,6 @@
         rdfs:label                   "Erection_of_Rodensis" ;
         scc:erection_resulting_unit  <http://purl.org/resource/scc/scc/religious_administrative_unit/Rodensis> .
 
-<error:java.net.URISyntaxException: Illegal character in path at index 63: http://purl.org/resource/scc/erection/Erection_of_Civitatensis_[Sancti_Severi]>
-        a                            scc:erection ;
-        rdfs:label                   "Erection_of_Civitatensis_[Sancti_Severi]" ;
-        scc:erection_resulting_unit  <http://purl.org/scc/religious_administrative_unit/Civitatensis%20%5BSancti%20Severi%5D> .
 
 <http://purl.org/resource/scc/scc/religious_administrative_unit/Adurensis>
         a                     scc:Diocese ;
@@ -1721,12 +1711,6 @@
         rdfs:label                   "Erection_of_Clogheriensis" ;
         scc:erection_resulting_unit  <http://purl.org/resource/scc/scc/religious_administrative_unit/Clogheriensis> .
 
-<http://purl.org/scc/religious_administrative_unit/Civitatensis%20%5BSancti%20Severi%5D>
-        a                     scc:Diocese ;
-        scc:Religious_Administration_Type
-                <http://purl.org/resource/scc/scc/religious_administrative_unit/religious_administration_type/suff.> ;
-        crm:P86_falls_within  "XI sec." ;
-        skos:prefLabel        "Civitatensis [Sancti Severi]" .
 
 <http://purl.org/scc/religious_administrative_unit/Cephaloniensis%20et%20Zacynthiensis>
         a                     scc:Diocese ;
@@ -2726,10 +2710,6 @@
         rdfs:label                   "Erection_of_Teruanensis" ;
         scc:erection_resulting_unit  <http://purl.org/resource/scc/scc/religious_administrative_unit/Teruanensis> .
 
-<error:java.net.URISyntaxException: Illegal character in path at index 63: http://purl.org/resource/scc/erection/Erection_of_Civitatensis_[in_Sardinia]>
-        a                            scc:erection ;
-        rdfs:label                   "Erection_of_Civitatensis_[in_Sardinia]" ;
-        scc:erection_resulting_unit  <http://purl.org/scc/religious_administrative_unit/Civitatensis%20%5Bin%20Sardinia%5D> .
 
 <http://purl.org/resource/scc/erection/Erection_of_Castrensis_in_Apulia>
         a                            scc:erection ;
