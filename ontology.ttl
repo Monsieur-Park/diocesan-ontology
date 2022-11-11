@@ -891,69 +891,12 @@ scc:interacts_in rdf:type owl:ObjectProperty ;
                  rdfs:label "interacts in"@en .
 
 
-###  http://purl.org/ontology/scc#is_acquisition_of
-scc:is_acquisition_of rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf scc:is_situation_of ;
-                      rdfs:domain scc:acquisition ;
-                      rdfs:range scc:Diocese ;
-                      rdfs:comment "This property relates an acquisition event to the entity involved in the acquisition."@en ;
-                      rdfs:label "is acquisition of"@en .
-
-
-###  http://purl.org/ontology/scc#is_administration_of
-scc:is_administration_of rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf scc:is_situation_of ;
-                         rdfs:domain scc:administration ;
-                         rdfs:range scc:Diocese ;
-                         rdfs:label "is administration of"@en .
-
-
-###  http://purl.org/ontology/scc#is_administration_perpetual_of
-scc:is_administration_perpetual_of rdf:type owl:ObjectProperty ;
-                                   rdfs:subPropertyOf scc:is_situation_of ;
-                                   rdfs:domain scc:perpetual_administration ;
-                                   rdfs:range scc:Diocese ;
-                                   rdfs:label "is administration perpetual of"@en .
-
-
-###  http://purl.org/ontology/scc#is_arising_of
-scc:is_arising_of rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf scc:is_situation_of ;
-                  rdfs:domain scc:arising ;
-                  rdfs:range scc:Diocese ;
-                  rdfs:label "is arising of"@en .
-
-
 ###  http://purl.org/ontology/scc#is_composed_of
 scc:is_composed_of rdf:type owl:ObjectProperty ;
                    owl:inverseOf scc:is_part_of ;
                    rdfs:domain <http://erlangen-crm.org/140617/E53_Place> ;
                    rdfs:range <http://erlangen-crm.org/140617/E39_Actor> ;
                    rdfs:label "is composed of"@en .
-
-
-###  http://purl.org/ontology/scc#is_incorporation_of
-scc:is_incorporation_of rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf scc:is_situation_of ;
-                        rdfs:domain scc:incorporation ;
-                        rdfs:range scc:Diocese ;
-                        rdfs:label "is incorporation of"@en .
-
-
-###  http://purl.org/ontology/scc#is_loss_of
-scc:is_loss_of rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf scc:is_situation_of ;
-               rdfs:domain scc:loss ;
-               rdfs:range scc:Diocese ;
-               rdfs:label "is loss of"@en .
-
-
-###  http://purl.org/ontology/scc#is_modifying_of
-scc:is_modifying_of rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf scc:is_situation_of ;
-                    rdfs:domain scc:modification ;
-                    rdfs:range scc:Diocese ;
-                    rdfs:label "is modifying of"@en .
 
 
 ###  http://purl.org/ontology/scc#is_part_of
@@ -969,67 +912,6 @@ scc:is_part_of_province rdf:type owl:ObjectProperty ;
                         rdfs:domain scc:administrative_entity ;
                         rdfs:range scc:AdministrativeArea ;
                         rdfs:label "is part of province"@en .
-
-
-###  http://purl.org/ontology/scc#is_separation_of
-scc:is_separation_of rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf scc:is_situation_of ;
-                     rdfs:domain scc:separation ;
-                     rdfs:range scc:Diocese ;
-                     rdfs:label "is separation of"@en .
-
-
-###  http://purl.org/ontology/scc#is_situation_of
-scc:is_situation_of rdf:type owl:ObjectProperty ;
-                    rdfs:domain scc:Change ;
-                    rdfs:range scc:administrative_entity ;
-                    rdfs:comment "The property that links a situation to any object."@en ;
-                    rdfs:label "is situation of"@en .
-
-
-###  http://purl.org/ontology/scc#is_union_of
-scc:is_union_of rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf scc:is_situation_of ;
-                rdfs:domain scc:union ;
-                rdfs:range [ rdf:type owl:Class ;
-                             owl:unionOf ( scc:Diocese
-                                           scc:prelature
-                                         )
-                           ] ;
-                rdfs:label "is union of"@en .
-
-
-###  http://purl.org/ontology/scc#is_unione_aeque_principaliter_of
-scc:is_unione_aeque_principaliter_of rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf scc:is_situation_of ;
-                                     rdfs:domain scc:union_aeque_principaliter ;
-                                     rdfs:range [ rdf:type owl:Class ;
-                                                  owl:unionOf ( scc:Diocese
-                                                                scc:archpriesthood
-                                                                scc:metropolis
-                                                              )
-                                                ] ;
-                                     rdfs:label "is unione aeque principaliter of"@en .
-
-
-###  http://purl.org/ontology/scc#is_unione_in_persona_episcopi_of
-scc:is_unione_in_persona_episcopi_of rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf scc:is_situation_of ;
-                                     rdfs:domain scc:union_In_persona_episcopi ;
-                                     rdfs:range scc:Diocese ;
-                                     rdfs:label "is unione in persona episcopi of"@en .
-
-
-###  http://purl.org/ontology/scc#is_unione_plena_of
-scc:is_unione_plena_of rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf scc:is_situation_of ;
-                       rdfs:domain scc:union_plena ;
-                       rdfs:range [ rdf:type owl:Class ;
-                                    owl:unionOf ( scc:Diocese
-                                                  scc:archpriesthood
-                                                )
-                                  ] ;
-                       rdfs:label "is unione plena of"@en .
 
 
 ###  http://purl.org/ontology/scc#precedingEvent
@@ -2429,10 +2311,6 @@ scc:acquisition rdf:type owl:Class ;
                                                      ]
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty scc:is_acquisition_of ;
-                                  owl:someValuesFrom scc:Diocese
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty scc:has_date ;
                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:dateTime
@@ -2450,14 +2328,6 @@ scc:acquisition_and_loss rdf:type owl:Class ;
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty scc:has_loss_participant ;
-                                           owl:someValuesFrom scc:metropolis
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty scc:is_acquisition_of ;
-                                           owl:someValuesFrom scc:Diocese
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty scc:is_loss_of ;
                                            owl:someValuesFrom scc:metropolis
                                          ] ;
                          rdfs:comment "metropolitan diocese that acquires the territory of a suppressed diocese and at the same time loses one or more suffragan dioceses"@en ;
@@ -2497,10 +2367,6 @@ scc:administration rdf:type owl:Class ;
                                                                         scc:metropolis
                                                                       )
                                                         ]
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty scc:is_administration_of ;
-                                     owl:allValuesFrom scc:Diocese
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty scc:has_date ;
@@ -2567,10 +2433,6 @@ scc:arising rdf:type owl:Class ;
                                                                  scc:prelature
                                                                )
                                                  ]
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty scc:is_arising_of ;
-                              owl:someValuesFrom scc:Diocese
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty scc:has_date ;
@@ -2797,10 +2659,6 @@ scc:incorporation rdf:type owl:Class ;
                                                        ]
                                   ] ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty scc:is_incorporation_of ;
-                                    owl:allValuesFrom scc:Diocese
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty scc:has_date ;
                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:dateTime
@@ -2819,14 +2677,6 @@ scc:incorporation_and_loss rdf:type owl:Class ;
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty scc:has_loss_participant ;
                                              owl:someValuesFrom scc:metropolis
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty scc:is_incorporation_of ;
-                                             owl:someValuesFrom scc:Diocese
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty scc:is_loss_of ;
-                                             owl:someValuesFrom scc:Diocese
                                            ] ;
                            rdfs:comment "metropolis that incorporates a new suffragan diocese and at the same time loses one or more suffragan dioceses"@en ;
                            rdfs:label "incorporation and loss"@en .
@@ -2865,10 +2715,6 @@ scc:loss rdf:type owl:Class ;
                            owl:someValuesFrom scc:metropolis
                          ] ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty scc:is_loss_of ;
-                           owl:someValuesFrom scc:Diocese
-                         ] ,
-                         [ rdf:type owl:Restriction ;
                            owl:onProperty scc:has_date ;
                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                            owl:onDataRange xsd:dateTime
@@ -2902,10 +2748,6 @@ scc:modification rdf:type owl:Class ;
                                                                       scc:patriarchate
                                                                     )
                                                       ]
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty scc:is_modifying_of ;
-                                   owl:someValuesFrom scc:Diocese
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty scc:has_date ;
@@ -2954,10 +2796,6 @@ scc:perpetual_administration rdf:type owl:Class ;
                                                                                   scc:metropolis
                                                                                 )
                                                                   ]
-                                             ] ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty scc:is_administration_perpetual_of ;
-                                               owl:someValuesFrom scc:Diocese
                                              ] ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty scc:has_date ;
@@ -3053,10 +2891,6 @@ scc:separation rdf:type owl:Class ;
                                scc:Type_of_governing_change ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty scc:has_separation_diocese ;
-                                 owl:someValuesFrom scc:Diocese
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty scc:is_separation_of ;
                                  owl:someValuesFrom scc:Diocese
                                ] ,
                                [ rdf:type owl:Restriction ;
@@ -3175,14 +3009,6 @@ scc:union rdf:type owl:Class ;
                                         )
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty scc:is_union_of ;
-                            owl:someValuesFrom [ rdf:type owl:Class ;
-                                                 owl:unionOf ( scc:Diocese
-                                                               scc:prelature
-                                                             )
-                                               ]
-                          ] ,
-                          [ rdf:type owl:Restriction ;
                             owl:onProperty scc:has_date ;
                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onDataRange xsd:dateTime
@@ -3204,10 +3030,6 @@ scc:union_In_persona_episcopi rdf:type owl:Class ;
                                                                                    scc:prelature
                                                                                  )
                                                                    ]
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty scc:is_unione_in_persona_episcopi_of ;
-                                                owl:someValuesFrom scc:Diocese
                                               ] ;
                               rdfs:comment "diocese united by virtue of having the same bishop"@en ;
                               rdfs:label "union In persona episcopi"@en ;
@@ -3224,15 +3046,6 @@ scc:union_aeque_principaliter rdf:type owl:Class ;
                                                                                    scc:archdiocese
                                                                                    scc:metropolis
                                                                                    scc:prelature
-                                                                                 )
-                                                                   ]
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty scc:is_unione_in_persona_episcopi_of ;
-                                                owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                     owl:unionOf ( scc:Diocese
-                                                                                   scc:archpriesthood
-                                                                                   scc:metropolis
                                                                                  )
                                                                    ]
                                               ] ;
@@ -3252,14 +3065,6 @@ scc:union_plena rdf:type owl:Class ;
                                                                      scc:archpriesthood
                                                                      scc:metropolis
                                                                      scc:prelature
-                                                                   )
-                                                     ]
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty scc:is_unione_plena_of ;
-                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:unionOf ( scc:Diocese
-                                                                     scc:archpriesthood
                                                                    )
                                                      ]
                                 ] ;
