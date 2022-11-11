@@ -102,37 +102,28 @@ $(function(){
 <tbody>
 <tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;http://purl.org/ontology/scc&gt;</td></tr>
 <tr><td></td><td></td></tr>
-<tr><td><b>role</b></td><td>&lt;http://www.estrellaproject.org/lkif-core/role.owl&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
-<tr><td><b>legal-role</b></td><td>&lt;http://www.estrellaproject.org/lkif-core/legal-role.owl&gt;</td></tr>
-<tr><td><b>wiki</b></td><td>&lt;https://www.wikidata.org/wiki&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
 <tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
-<tr><td><b>current</b></td><td>&lt;http://erlangen-crm.org/current&gt;</td></tr>
-<tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;http://www.semanticweb.org/owl/owlapi/turtle&gt;</td></tr>
-<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
-<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
-<tr><td><b>cidoc-crm</b></td><td>&lt;http://www.cidoc-crm.org/cidoc-crm&gt;</td></tr>
-<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
-<tr><td><b>ontology</b></td><td>&lt;http://dbpedia.org/ontology&gt;</td></tr>
-<tr><td><b>process</b></td><td>&lt;http://www.estrellaproject.org/lkif-core/process.owl&gt;</td></tr>
-<tr><td><b>expression</b></td><td>&lt;http://www.estrellaproject.org/lkif-core/expression.owl&gt;</td></tr>
-<tr><td><b>Custom_or_Law_</b></td><td>&lt;http://purl.org/ontology/sccCustom_or_Law_–&gt;</td></tr>
 <tr><td><b>erlangen-crm1</b></td><td>&lt;http://erlangen-crm.org/120111&gt;</td></tr>
 <tr><td><b>erlangen-crm</b></td><td>&lt;http://erlangen-crm.org/140617&gt;</td></tr>
 <tr><td><b>erlangen-crm2</b></td><td>&lt;http://erlangen-crm.org/091216&gt;</td></tr>
-<tr><td><b>erlangen-crm3</b></td><td>&lt;http://erlangen-crm.org/211015&gt;</td></tr>
+<tr><td><b>current</b></td><td>&lt;http://erlangen-crm.org/current&gt;</td></tr>
 <tr><td><b>REC-owl-semantics-20040210</b></td><td>&lt;http://www.w3.org/TR/2004/REC-owl-semantics-20040210/&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
 <tr><td><b>entity</b></td><td>&lt;https://www.wikidata.org/entity&gt;</td></tr>
-<tr><td><b>lkif-top</b></td><td>&lt;http://www.estrellaproject.org/lkif-core/lkif-top.owl&gt;</td></tr>
+<tr><td><b>ontology</b></td><td>&lt;http://dbpedia.org/ontology&gt;</td></tr>
 <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
+
 
 <!--OVERVIEW SECTION-->
     <div id="overview"><h2 id="overview" class="list">Ontology Overview<span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -158,6 +149,9 @@ This ontology has the following classes and properties:</span>
          title="http://purl.org/ontology/scc#acquisition_nullius">acquisition nullius</a>
    </li>
    <li>
+      <a href="#http://erlangen-crm.org/140617/E39_Actor" title="http://erlangen-crm.org/140617/E39_Actor">Actor</a>
+   </li>
+   <li>
       <a href="#administration" title="http://purl.org/ontology/scc#administration">administration</a>
    </li>
    <li>
@@ -168,16 +162,8 @@ This ontology has the following classes and properties:</span>
       <a href="#AdministrativeArea" title="http://purl.org/ontology/scc#AdministrativeArea">Administrative Area</a>
    </li>
    <li>
-      <a href="#Administrative_Area_of_Diocese"
-         title="http://purl.org/ontology/scc#Administrative_Area_of_Diocese">Administrative Area of Diocese</a>
-   </li>
-   <li>
-      <a href="#Administrative_Area_Type"
-         title="http://purl.org/ontology/scc#Administrative_Area_Type">Administrative Area Type</a>
-   </li>
-   <li>
-      <a href="#administrative_entity"
-         title="http://purl.org/ontology/scc#administrative_entity">administrative entity</a>
+      <a href="#administrative_unit"
+         title="http://purl.org/ontology/scc#administrative_unit">administrative unit</a>
    </li>
    <li>
       <a href="#alternative_name" title="http://purl.org/ontology/scc#alternative_name">
@@ -209,14 +195,7 @@ This ontology has the following classes and properties:</span>
       <a href="#Bibliography" title="http://purl.org/ontology/scc#Bibliography">Bibliography</a>
    </li>
    <li>
-      <a href="#Canon_Law" title="http://purl.org/ontology/scc#Canon_Law">Canon Law</a>
-   </li>
-   <li>
       <a href="#Change" title="http://purl.org/ontology/scc#Change">Change</a>
-   </li>
-   <li>
-      <a href="#http://www.estrellaproject.org/lkif-core/process.owl#Change"
-         title="http://www.estrellaproject.org/lkif-core/process.owl#Change">change</a>
    </li>
    <li>
       <a href="#changed_name" title="http://purl.org/ontology/scc#changed_name">
@@ -234,10 +213,6 @@ This ontology has the following classes and properties:</span>
    </li>
    <li>
       <a href="#confirmation" title="http://purl.org/ontology/scc#confirmation">confirmation</a>
-   </li>
-   <li>
-      <a href="#Custom_or_Law_–_C17"
-         title="http://purl.org/ontology/scc#Custom_or_Law_–_C17">Custom or Law – C17</a>
    </li>
    <li>
       <a href="#decay" title="http://purl.org/ontology/scc#decay">decay</a>
@@ -260,28 +235,8 @@ This ontology has the following classes and properties:</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object"
-         title="http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object">E19 Physical Object</a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/current/E2_Temporal_Entity"
          title="http://erlangen-crm.org/current/E2_Temporal_Entity">E2 Temporal Entity</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object"
-         title="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object">E22 Human-Made Object</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"
-         title="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing">E24 Physical Human-Made Thing</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/E25_Human-Made_Feature"
-         title="http://www.cidoc-crm.org/cidoc-crm/E25_Human-Made_Feature">E25 Human-Made Feature</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature"
-         title="http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature">E26 Physical Feature</a>
    </li>
    <li>
       <a href="#http://erlangen-crm.org/140617/E28_Conceptual_Object"
@@ -292,16 +247,10 @@ This ontology has the following classes and properties:</span>
          title="http://erlangen-crm.org/current/E3_Condition_State">E3 Condition State</a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/E30_Right" title="http://www.cidoc-crm.org/cidoc-crm/E30_Right">E30 Right</a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/140617/E31_Document" title="http://erlangen-crm.org/140617/E31_Document">E31 Document</a>
    </li>
    <li>
       <a href="#http://erlangen-crm.org/140617/E35_Title" title="http://erlangen-crm.org/140617/E35_Title">E35_Title</a>
-   </li>
-   <li>
-      <a href="#http://erlangen-crm.org/140617/E39_Actor" title="http://erlangen-crm.org/140617/E39_Actor">E39_Actor</a>
    </li>
    <li>
       <a href="#http://erlangen-crm.org/current/E4_Period" title="http://erlangen-crm.org/current/E4_Period">E4 Period</a>
@@ -326,13 +275,13 @@ This ontology has the following classes and properties:</span>
          title="http://erlangen-crm.org/091216/E59.PrimitiveValue">E59.PrimitiveValue</a>
    </li>
    <li>
-      <a href="#http://erlangen-crm.org/091216/E60.Number" title="http://erlangen-crm.org/091216/E60.Number">E60.Number</a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/091216/E61.Time_Primitive"
          title="http://erlangen-crm.org/091216/E61.Time_Primitive">
          <span>e61. time primitive</span>
       </a>
+   </li>
+   <li>
+      <a href="#http://erlangen-crm.org/091216/E60.Number" title="http://erlangen-crm.org/091216/E60.Number">E61.Time_Primitive</a>
    </li>
    <li>
       <a href="#http://erlangen-crm.org/091216/E62.String" title="http://erlangen-crm.org/091216/E62.String">E62.String</a>
@@ -369,19 +318,8 @@ This ontology has the following classes and properties:</span>
          title="http://erlangen-crm.org/140617/E77_Persistent_Item">E77_Persistent Item</a>
    </li>
    <li>
-      <a href="#http://erlangen-crm.org/120111/E81_Transformation"
-         title="http://erlangen-crm.org/120111/E81_Transformation">E81 Transformation</a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/120111/E82_Actor_Appellation"
          title="http://erlangen-crm.org/120111/E82_Actor_Appellation">E82_Actor_Appellation</a>
-   </li>
-   <li>
-      <a href="#http://erlangen-crm.org/current/E86_Leaving" title="http://erlangen-crm.org/current/E86_Leaving">E86_Leaving</a>
-   </li>
-   <li>
-      <a href="#http://erlangen-crm.org/current/E89_Propositional_Object"
-         title="http://erlangen-crm.org/current/E89_Propositional_Object">E89 Propositional Object</a>
    </li>
    <li>
       <a href="#http://erlangen-crm.org/140617/E8_Acquisition" title="http://erlangen-crm.org/140617/E8_Acquisition">E8_Acquisition</a>
@@ -391,87 +329,17 @@ This ontology has the following classes and properties:</span>
          title="http://erlangen-crm.org/140617/E90_Symbolic_Object">E90 Symbolic Object</a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume"
-         title="http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume">E92 Spacetime Volume</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/E93_Presence" title="http://www.cidoc-crm.org/cidoc-crm/E93_Presence">E93 Presence</a>
-   </li>
-   <li>
-      <a href="#Ecclesiastical_Administrative_Area"
-         title="http://purl.org/ontology/scc#Ecclesiastical_Administrative_Area">Ecclesiastical Administrative Area</a>
-   </li>
-   <li>
-      <a href="#ecclesiastical_administrative_entity"
-         title="http://purl.org/ontology/scc#ecclesiastical_administrative_entity">ecclesiastical administrative entity</a>
-   </li>
-   <li>
       <a href="#ecclesiastical_province"
          title="http://purl.org/ontology/scc#ecclesiastical_province">ecclesiastical province</a>
    </li>
    <li>
-      <a href="#ecclesiastical_Administration_Type"
-         title="http://purl.org/ontology/scc#ecclesiastical_Administration_Type">Ecclesiastical_Administration_Type</a>
-   </li>
-   <li>
       <a href="#elevating" title="http://purl.org/ontology/scc#elevating">elevating</a>
-   </li>
-   <li>
-      <a href="#Entity_in_administration"
-         title="http://purl.org/ontology/scc#Entity_in_administration">Entity in administration</a>
-   </li>
-   <li>
-      <a href="#Entity_in_administration_perpetual"
-         title="http://purl.org/ontology/scc#Entity_in_administration_perpetual">Entity in administration perpetual</a>
-   </li>
-   <li>
-      <a href="#Entity_in_aquisition"
-         title="http://purl.org/ontology/scc#Entity_in_aquisition">Entity in aquisition</a>
-   </li>
-   <li>
-      <a href="#Entity_in_arising" title="http://purl.org/ontology/scc#Entity_in_arising">Entity in arising</a>
-   </li>
-   <li>
-      <a href="#Entity_in_incorporation"
-         title="http://purl.org/ontology/scc#Entity_in_incorporation">Entity in incorporation</a>
-   </li>
-   <li>
-      <a href="#Entity_in_loss" title="http://purl.org/ontology/scc#Entity_in_loss">Entity in loss</a>
-   </li>
-   <li>
-      <a href="#Entity_in_modifying"
-         title="http://purl.org/ontology/scc#Entity_in_modifying">Entity in modifying</a>
-   </li>
-   <li>
-      <a href="#Entity_in_separation"
-         title="http://purl.org/ontology/scc#Entity_in_separation">Entity in separation</a>
-   </li>
-   <li>
-      <a href="#Entity_in_union" title="http://purl.org/ontology/scc#Entity_in_union">Entity in union</a>
-   </li>
-   <li>
-      <a href="#Entity_in_unione_aeque_principaliter"
-         title="http://purl.org/ontology/scc#Entity_in_unione_aeque_principaliter">Entity in unione aeque principaliter</a>
-   </li>
-   <li>
-      <a href="#Entity_in_unione_in_persona_episcopi"
-         title="http://purl.org/ontology/scc#Entity_in_unione_in_persona_episcopi">Entity in unione in persona episcopi</a>
-   </li>
-   <li>
-      <a href="#Entity_in_unione_plena"
-         title="http://purl.org/ontology/scc#Entity_in_unione_plena">Entity in unione plena</a>
-   </li>
-   <li>
-      <a href="#https://ontome.net/class/211/namespace/3" title="https://ontome.net/class/211/namespace/3">Entity Quality – C1</a>
    </li>
    <li>
       <a href="#eparchy" title="http://purl.org/ontology/scc#eparchy">eparchy</a>
    </li>
    <li>
       <a href="#erection" title="http://purl.org/ontology/scc#erection">erection</a>
-   </li>
-   <li>
-      <a href="#Geographical_Place" title="http://purl.org/ontology/scc#Geographical_Place">Geographical Place</a>
    </li>
    <li>
       <a href="#Geographical_Place_Type"
@@ -494,45 +362,16 @@ This ontology has the following classes and properties:</span>
          title="http://purl.org/ontology/scc#incorporation_and_loss">incorporation and loss</a>
    </li>
    <li>
-      <a href="#https://ontome.net/class/756/namespace/3" title="https://ontome.net/class/756/namespace/3">Intention – C4</a>
-   </li>
-   <li>
-      <a href="#https://ontome.net/class/887/namespace/3" title="https://ontome.net/class/887/namespace/3">Intentional Event – C10</a>
-   </li>
-   <li>
       <a href="#latitude" title="http://purl.org/ontology/scc#latitude">latitude</a>
    </li>
    <li>
-      <a href="#legal_administrative_role"
-         title="http://purl.org/ontology/scc#legal_administrative_role">legal administrative role</a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/140617/E40_Legal_Body" title="http://erlangen-crm.org/140617/E40_Legal_Body">Legal Body</a>
-   </li>
-   <li>
-      <a href="#legal_interaction" title="http://purl.org/ontology/scc#legal_interaction">legal interaction</a>
-   </li>
-   <li>
-      <a href="#http://www.estrellaproject.org/lkif-core/legal-role.owl#Legal_Role"
-         title="http://www.estrellaproject.org/lkif-core/legal-role.owl#Legal_Role">
-         <span>legal role</span>
-      </a>
    </li>
    <li>
       <a href="#longitude" title="http://purl.org/ontology/scc#longitude">longitude</a>
    </li>
    <li>
       <a href="#loss" title="http://purl.org/ontology/scc#loss">loss</a>
-   </li>
-   <li>
-      <a href="#http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Entity"
-         title="http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Entity">
-         <span>mental entity</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Object"
-         title="http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Object">Mental Object</a>
    </li>
    <li>
       <a href="#metropolis" title="http://purl.org/ontology/scc#metropolis">metropolis</a>
@@ -549,12 +388,6 @@ This ontology has the following classes and properties:</span>
       <a href="#organization" title="http://purl.org/ontology/scc#organization">organization</a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/PC14_carried_out_by"
-         title="http://www.cidoc-crm.org/cidoc-crm/PC14_carried_out_by">
-         <span>p c14 carried out by</span>
-      </a>
-   </li>
-   <li>
       <a href="#parish" title="http://purl.org/ontology/scc#parish">parish (plebania)</a>
    </li>
    <li>
@@ -565,9 +398,6 @@ This ontology has the following classes and properties:</span>
          title="http://purl.org/ontology/scc#perpetual_administration">perpetual administration</a>
    </li>
    <li>
-      <a href="#https://ontome.net/class/702/namespace/112" title="https://ontome.net/class/702/namespace/112">Persons' Interaction – C18</a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/140617/E44_Place_Appellation"
          title="http://erlangen-crm.org/140617/E44_Place_Appellation">Place Appellation</a>
    </li>
@@ -575,18 +405,10 @@ This ontology has the following classes and properties:</span>
       <a href="#http://erlangen-crm.org/140617/E48_Place_Name" title="http://erlangen-crm.org/140617/E48_Place_Name">Place Name</a>
    </li>
    <li>
-      <a href="#https://ontome.net/class/864/namespace/3" title="https://ontome.net/class/864/namespace/3">Plan – C36</a>
+      <a href="#populated_place" title="http://purl.org/ontology/scc#populated_place">populated place</a>
    </li>
    <li>
       <a href="#prelature" title="http://purl.org/ontology/scc#prelature">prelature</a>
-   </li>
-   <li>
-      <a href="#http://www.estrellaproject.org/lkif-core/process.owl#Process"
-         title="http://www.estrellaproject.org/lkif-core/process.owl#Process">Processs</a>
-   </li>
-   <li>
-      <a href="#http://www.estrellaproject.org/lkif-core/expression.owl#Proposition"
-         title="http://www.estrellaproject.org/lkif-core/expression.owl#Proposition">Proposition</a>
    </li>
    <li>
       <a href="#reestablishment" title="http://purl.org/ontology/scc#reestablishment">reestablishment</a>
@@ -599,22 +421,27 @@ This ontology has the following classes and properties:</span>
       <a href="#Reign" title="http://purl.org/ontology/scc#Reign">Reign</a>
    </li>
    <li>
+      <a href="#Religious_Administrative_Area"
+         title="http://purl.org/ontology/scc#Religious_Administrative_Area">Religious Administrative Area</a>
+   </li>
+   <li>
+      <a href="#religious_administrative_unit"
+         title="http://purl.org/ontology/scc#religious_administrative_unit">religious administrative unit</a>
+   </li>
+   <li>
+      <a href="#Religious_Administration_Type"
+         title="http://purl.org/ontology/scc#Religious_Administration_Type">Religious_Administration_Type</a>
+   </li>
+   <li>
       <a href="#renomination" title="http://purl.org/ontology/scc#renomination">renomination</a>
-   </li>
-   <li>
-      <a href="#Role" title="http://purl.org/ontology/scc#Role">Role</a>
-   </li>
-   <li>
-      <a href="#http://www.estrellaproject.org/lkif-core/role.owl#Role"
-         title="http://www.estrellaproject.org/lkif-core/role.owl#Role">Role</a>
    </li>
    <li>
       <a href="#Secular_Administrative_Area"
          title="http://purl.org/ontology/scc#Secular_Administrative_Area">Secular Administrative Area</a>
    </li>
    <li>
-      <a href="#secular_administrative_entity"
-         title="http://purl.org/ontology/scc#secular_administrative_entity">secular administrative entity</a>
+      <a href="#secular_administrative_unit"
+         title="http://purl.org/ontology/scc#secular_administrative_unit">secular administrative unit</a>
    </li>
    <li>
       <a href="#Sede_vacante" title="http://purl.org/ontology/scc#Sede_vacante">sede vacante</a>
@@ -642,26 +469,11 @@ This ontology has the following classes and properties:</span>
       <a href="#territorial_change" title="http://purl.org/ontology/scc#territorial_change">territorial change</a>
    </li>
    <li>
-      <a href="#Territory" title="http://purl.org/ontology/scc#Territory">Territory</a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/140617/E49_Time_Appellation"
          title="http://erlangen-crm.org/140617/E49_Time_Appellation">Time Appellation</a>
    </li>
    <li>
       <a href="#titular" title="http://purl.org/ontology/scc#titular">titular</a>
-   </li>
-   <li>
-      <a href="#Type_of_governing_change"
-         title="http://purl.org/ontology/scc#Type_of_governing_change">Type of governing change</a>
-   </li>
-   <li>
-      <a href="#Type_of_status_change"
-         title="http://purl.org/ontology/scc#Type_of_status_change">Type of status change</a>
-   </li>
-   <li>
-      <a href="#Type_of_territorial_change"
-         title="http://purl.org/ontology/scc#Type_of_territorial_change">Type of territorial change</a>
    </li>
    <li>
       <a href="#union" title="http://purl.org/ontology/scc#union">union</a>
@@ -676,9 +488,6 @@ This ontology has the following classes and properties:</span>
    </li>
    <li>
       <a href="#union_plena" title="http://purl.org/ontology/scc#union_plena">union plena</a>
-   </li>
-   <li>
-      <a href="#https://ontome.net/class/633/namespace/112" title="https://ontome.net/class/633/namespace/112">Union – C9</a>
    </li>
    <li>
       <a href="#vicariate" title="http://purl.org/ontology/scc#vicariate">vicariate</a>
@@ -732,10 +541,6 @@ This ontology has the following classes and properties:</span>
          title="http://purl.org/ontology/scc#has_confirmation_participant">has confirmation participant</a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member"
-         title="http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member">has current or former member</a>
-   </li>
-   <li>
       <a href="#has_decay_participant"
          title="http://purl.org/ontology/scc#has_decay_participant">has decay participant</a>
    </li>
@@ -774,8 +579,8 @@ This ontology has the following classes and properties:</span>
       <a href="#has_seat" title="http://purl.org/ontology/scc#has_seat">has seat</a>
    </li>
    <li>
-      <a href="#has_separation_diocese"
-         title="http://purl.org/ontology/scc#has_separation_diocese">has separation diocese</a>
+      <a href="#has_separation_participant"
+         title="http://purl.org/ontology/scc#has_separation_participant">has separation participant</a>
    </li>
    <li>
       <a href="#has_suppression_participant"
@@ -788,18 +593,6 @@ This ontology has the following classes and properties:</span>
    <li>
       <a href="#has_transfer_participant"
          title="http://purl.org/ontology/scc#has_transfer_participant">has transfer participant</a>
-   </li>
-   <li>
-      <a href="#Has_type_of_governing_change"
-         title="http://purl.org/ontology/scc#Has_type_of_governing_change">Has type of governing change</a>
-   </li>
-   <li>
-      <a href="#Has_type_of_status_change"
-         title="http://purl.org/ontology/scc#Has_type_of_status_change">Has type of status change</a>
-   </li>
-   <li>
-      <a href="#Has_type_of_territorial_change"
-         title="http://purl.org/ontology/scc#Has_type_of_territorial_change">Has type of territorial change</a>
    </li>
    <li>
       <a href="#has_union_participant"
@@ -819,9 +612,6 @@ This ontology has the following classes and properties:</span>
    </li>
    <li>
       <a href="#headof" title="http://purl.org/ontology/scc#headof">head of</a>
-   </li>
-   <li>
-      <a href="#interacts_in" title="http://purl.org/ontology/scc#interacts_in">interacts in</a>
    </li>
    <li>
       <a href="#is_acquisition_of" title="http://purl.org/ontology/scc#is_acquisition_of">is acquisition of</a>
@@ -882,30 +672,6 @@ This ontology has the following classes and properties:</span>
       <a href="#is_unione_plena_of" title="http://purl.org/ontology/scc#is_unione_plena_of">is unione plena of</a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P01_has_domain"
-         title="http://www.cidoc-crm.org/cidoc-crm/P01_has_domain">
-         <span>p01 has domain</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P01i_is_domain_of"
-         title="http://www.cidoc-crm.org/cidoc-crm/P01i_is_domain_of">
-         <span>p01i is domain of</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P02_has_range"
-         title="http://www.cidoc-crm.org/cidoc-crm/P02_has_range">
-         <span>p02 has range</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P02i_is_range_of"
-         title="http://www.cidoc-crm.org/cidoc-crm/P02i_is_range_of">
-         <span>p02i is range of</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/091216/P1I.identifies" title="http://erlangen-crm.org/091216/P1I.identifies">
          <span>p1 i.identifies</span>
       </a>
@@ -919,14 +685,6 @@ This ontology has the following classes and properties:</span>
    </li>
    <li>
       <a href="#http://erlangen-crm.org/120111/P102i_is_title_of" title="http://erlangen-crm.org/120111/P102i_is_title_of">P102i_is_title_of</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by"
-         title="http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by">P105 right held by</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P105i_has_right_on"
-         title="http://www.cidoc-crm.org/cidoc-crm/P105i_has_right_on">P105i has right on</a>
    </li>
    <li>
       <a href="#http://erlangen-crm.org/140617/P117_occurs_during"
@@ -945,66 +703,11 @@ This ontology has the following classes and properties:</span>
          title="http://erlangen-crm.org/140617/P120i_occurs_after">P120i occurs after</a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P123_resulted_in"
-         title="http://www.cidoc-crm.org/cidoc-crm/P123_resulted_in">P123 resulted in</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P124_transformed"
-         title="http://www.cidoc-crm.org/cidoc-crm/P124_transformed">
-         <span>p124 transformed</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/120111/P12_occurred_in_the_presence_of"
          title="http://erlangen-crm.org/120111/P12_occurred_in_the_presence_of">P12_occurred_in_the_presence_of</a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of"
-         title="http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of">
-         <span>p14.1 in the role of</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://erlangen-crm.org/current/P145_separated" title="http://erlangen-crm.org/current/P145_separated">P145_separated</a>
-   </li>
-   <li>
-      <a href="#http://erlangen-crm.org/current/P146_separated_from"
-         title="http://erlangen-crm.org/current/P146_separated_from">P146 separated from</a>
-   </li>
-   <li>
-      <a href="#http://erlangen-crm.org/211015/P14_carried_out_by"
-         title="http://erlangen-crm.org/211015/P14_carried_out_by">P14_carried_out_by</a>
-   </li>
-   <li>
-      <a href="#http://erlangen-crm.org/140617/P14i_performed" title="http://erlangen-crm.org/140617/P14i_performed">P14i performed</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from"
-         title="http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from">
-         <span>p151 was formed from</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P156_occupies"
-         title="http://www.cidoc-crm.org/cidoc-crm/P156_occupies">
-         <span>p156 occupies</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P157i_provides_reference_space_for"
-         title="http://www.cidoc-crm.org/cidoc-crm/P157i_provides_reference_space_for">P157i provides reference space for</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P160_has_temporal_projection"
-         title="http://www.cidoc-crm.org/cidoc-crm/P160_has_temporal_projection">P160 has temporal projection</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P161_has_spatial_projection"
-         title="http://www.cidoc-crm.org/cidoc-crm/P161_has_spatial_projection">P161 has spatial projection</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P173_starts_before_or_with_the_end_of"
-         title="http://www.cidoc-crm.org/cidoc-crm/P173_starts_before_or_with_the_end_of">P173 starts before or with the end of</a>
+      <a href="#http://erlangen-crm.org/140617/P14i_performed" title="http://erlangen-crm.org/140617/P14i_performed">P14 performed</a>
    </li>
    <li>
       <a href="#http://erlangen-crm.org/140617/P2_has_type" title="http://erlangen-crm.org/140617/P2_has_type">P2 has type</a>
@@ -1034,26 +737,6 @@ This ontology has the following classes and properties:</span>
          title="http://erlangen-crm.org/140617/P4i_is_time-span_of">p4i is time-span of</a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner"
-         title="http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner">P51 has former or current owner</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of"
-         title="http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of">P51i is former or current owner of</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner"
-         title="http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner">P52 has current owner</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of"
-         title="http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of">P52i is current owner of</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location"
-         title="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location">P53 has former or current location</a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/091216/P59I.is_located_on_or_within"
          title="http://erlangen-crm.org/091216/P59I.is_located_on_or_within">P59I.is_located_on_or_within</a>
    </li>
@@ -1070,10 +753,6 @@ This ontology has the following classes and properties:</span>
    </li>
    <li>
       <a href="#http://erlangen-crm.org/120111/P7_took_place_at" title="http://erlangen-crm.org/120111/P7_took_place_at">P7_took_place_at</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within"
-         title="http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within">P8 took place on or within</a>
    </li>
    <li>
       <a href="#http://erlangen-crm.org/091216/P82.at_some_time_within"
@@ -1115,57 +794,12 @@ This ontology has the following classes and properties:</span>
       <a href="#resulting_to" title="http://purl.org/ontology/scc#resulting_to">resulting to</a>
    </li>
    <li>
-      <a href="#role_in_administration"
-         title="http://purl.org/ontology/scc#role_in_administration">role in administration</a>
-   </li>
-   <li>
-      <a href="#role_in_administration_perpetual"
-         title="http://purl.org/ontology/scc#role_in_administration_perpetual">role in administration perpetual</a>
-   </li>
-   <li>
-      <a href="#role_in_aquisition" title="http://purl.org/ontology/scc#role_in_aquisition">role in aquisition</a>
-   </li>
-   <li>
-      <a href="#role_in_arising" title="http://purl.org/ontology/scc#role_in_arising">role in arising</a>
-   </li>
-   <li>
-      <a href="#role_in_incorporation"
-         title="http://purl.org/ontology/scc#role_in_incorporation">role in incorporation</a>
-   </li>
-   <li>
-      <a href="#role_in_loss" title="http://purl.org/ontology/scc#role_in_loss">role in loss</a>
-   </li>
-   <li>
-      <a href="#role_in_modifying" title="http://purl.org/ontology/scc#role_in_modifying">role in modifying</a>
-   </li>
-   <li>
-      <a href="#role_in_separation" title="http://purl.org/ontology/scc#role_in_separation">role in separation</a>
-   </li>
-   <li>
-      <a href="#role_in_union" title="http://purl.org/ontology/scc#role_in_union">role in union</a>
-   </li>
-   <li>
-      <a href="#role_in_unione_aeque_principaliter"
-         title="http://purl.org/ontology/scc#role_in_unione_aeque_principaliter">role in unione aeque principaliter</a>
-   </li>
-   <li>
-      <a href="#role_in_unione_in_persona_episcopi"
-         title="http://purl.org/ontology/scc#role_in_unione_in_persona_episcopi">role in unione in persona episcopi</a>
-   </li>
-   <li>
-      <a href="#role_in_unione_plena"
-         title="http://purl.org/ontology/scc#role_in_unione_plena">role in unione plena</a>
-   </li>
-   <li>
       <a href="#succeedingUnit" title="http://purl.org/ontology/scc#succeedingUnit">
          <span>Succeeding Unit</span>
       </a>
    </li>
    <li>
       <a href="#successor" title="http://purl.org/ontology/scc#successor">Successor</a>
-   </li>
-   <li>
-      <a href="#took_place_at" title="http://purl.org/ontology/scc#took_place_at">took place at</a>
    </li>
    <li>
       <a href="#transfer_seat" title="http://purl.org/ontology/scc#transfer_seat">transfer seat</a>
@@ -1215,106 +849,11 @@ This ontology has the following classes and properties:</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P170i_time_is_defined_by"
-         title="http://www.cidoc-crm.org/cidoc-crm/P170i_time_is_defined_by">P170i time is defined by</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P171_at_some_place_within"
-         title="http://www.cidoc-crm.org/cidoc-crm/P171_at_some_place_within">P171 at some place within</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P81_ongoing_throughout"
-         title="http://www.cidoc-crm.org/cidoc-crm/P81_ongoing_throughout">P81 ongoing throughout</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P81a_end_of_the_begin"
-         title="http://www.cidoc-crm.org/cidoc-crm/P81a_end_of_the_begin">P81a end of the begin</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P81b_begin_of_the_end"
-         title="http://www.cidoc-crm.org/cidoc-crm/P81b_begin_of_the_end">P81b begin of the end</a>
-   </li>
-   <li>
       <a href="#http://erlangen-crm.org/current/P82_at_some_time_within"
          title="http://erlangen-crm.org/current/P82_at_some_time_within">P82 at some time within</a>
    </li>
    <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin"
-         title="http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin">P82a begin of the begin</a>
-   </li>
-   <li>
-      <a href="#http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end"
-         title="http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end">P82b end of the end</a>
-   </li>
-   <li>
       <a href="#toponym" title="http://purl.org/ontology/scc#toponym">toponym</a>
-   </li>
-</ul><h4>Annotation Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
-   <li>
-      <a href="#alternative_name" title="http://purl.org/ontology/scc#alternative_name">
-         <span>alternative name</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
-         <span>creator</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
-         <span>description</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/language" title="http://purl.org/dc/terms/language">
-         <span>language</span>
-      </a>
-   </li>
-   <li>
-      <a href="#Name_of_administrative_unit"
-         title="http://purl.org/ontology/scc#Name_of_administrative_unit">Name of administrative unit</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation">
-         <span>notation</span>
-      </a>
-   </li>
-   <li>
-      <a href="#official_name" title="http://purl.org/ontology/scc#official_name">
-         <span>official name</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs"
-         title="http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs">owl:sameAs</a>
-   </li>
-   <li>
-      <a href="#http://xmlns.com/foaf/0.1/page" title="http://xmlns.com/foaf/0.1/page">
-         <span>page</span>
-      </a>
-   </li>
-   <li>
-      <a href="#precedingUnit" title="http://purl.org/ontology/scc#precedingUnit">
-         <span>Preceding Unit</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel">
-         <span>pref label</span>
-      </a>
-   </li>
-   <li>
-      <a href="#succeedingUnit" title="http://purl.org/ontology/scc#succeedingUnit">
-         <span>Succeeding Unit</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
-         <span>title</span>
-      </a>
-   </li>
-   <li>
-      <a href="#variantName" title="http://purl.org/ontology/scc#variantName">Variant name</a>
    </li>
 </ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
@@ -1403,8 +942,9 @@ This ontology has the following classes and properties:</span>
    <li>
       <a href="#Veliternensis" title="http://purl.org/ontology/scc#Veliternensis">Veliternensis Veliternensis</a>
    </li>
-</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe>
 </div>
+
 
 <!--Construction SECTION-->
     <div id="construction"><h2 id="desc" class="list">Construction Methods <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -1430,7 +970,7 @@ This ontology has the following classes and properties:</span>
 
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for SCC Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-   
+
 <div id="conclusion">
 <h2 id="con" class="list">Conclusion & Future Works <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
